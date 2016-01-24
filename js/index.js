@@ -4,16 +4,35 @@
 
 
 $(document).ready(function(){
-    $("#slideshow > div:gt(0)").hide();
-
+    $("#slideshow1 > div:gt(0)").hide();
     setInterval(function() {
-        $('#slideshow > div:first')
+        $('#slideshow1 > div:first')
             .fadeOut(1000)
             .next()
             .fadeIn(1000)
             .end()
-            .appendTo('#slideshow');
-    },  5000);
+            .appendTo('#slideshow1');
+    },  2500);
+
+    $("#slideshow2 > div:gt(0)").hide();
+    setInterval(function() {
+        $('#slideshow2 > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow2');
+    },  2500);
+
+    $("#slideshow3 > div:gt(0)").hide();
+    setInterval(function() {
+        $('#slideshow3 > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow3');
+    },  2500);
 
 
 
