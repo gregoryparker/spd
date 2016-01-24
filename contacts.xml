@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spd>
+    <member>
+        <name>Varun Shivakumar</name>
+        <hometown>Plainview, NY</hometown>
+        <pcsem>Fall</pcsem><!-- Pledge Class Semester -->
+        <pcyear>2015</pcyear><!-- Pledge Class Years -->
+        <major>CSE</major>
+        <graddate>2017</graddate><!-- Graduation Year -->
+        <active>Yes</active>
+        <description></description>
+
+    </member>
+</spd>

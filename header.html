@@ -1,0 +1,84 @@
+<!-- Header -->
+<div class="posRel shadowBottom" style="padding: 0 0 25px 0; background-color: #191919;">
+    <div style="width: 960px; margin: 0 auto;">
+        <!-- SIGMA PHI DELTA -->
+        <div class="posRel" style="font-size: 100px; color: #F7302F; text-align: center; font-family: Adam; padding: 45px 0 10px 0; ">
+            <span style="padding: 5px;"><!--<span style="font-size: 101px;">&Sigma;</span>-->SIGMA</span>
+            <span style="padding: 5px;">PHI<!--<span style="font-size: 101px;">&Phi;</span>--></span>
+            <span style="padding: 5px;"><!--<span style="font-size: 101px;">&Delta;</span>-->DELTA</span>
+        </div>
+
+        <!-- Subtitle -->
+        <div class="posRel" style="font-size: 26px; color:#F7302F; text-align: center; font-family: Adam;">
+            Beta - Eta Chapter
+            &middot;
+            <!--<div class="inlineBlock posRel" style="height: 2px; background-color: #F7302F; width: 75px; vertical-align: middle; bottom: 2px;"></div>-->
+            SUNY
+            &middot;
+            Stony Brook University
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="bordRed" style="height: 45px; width: 85%; margin: 20px auto; border-radius: 5px; border: 2px solid lightgrey; display: table;">
+            <a href="index.html" id="nvb-index" class="navbaritem textDecNone" data-transition="flow">HOME</a>
+            <a href="about.html" id="nvb-about" class="navbaritem" data-transition="flow">ABOUT</a>
+            <a href="rush.html" id="nvb-rush" class="navbaritem" data-transition="flow">RUSH</a>
+            <a href="events.html" id="nvb-events" class="navbaritem" data-transition="flow">EVENTS</a>
+            <a href="members.html" id="nvb-members" class="navbaritem" data-transition="flow">MEMBERS</a>
+            <a href="alumni.html" id="nvb-alumni" class="navbaritem" data-transition="flow">ALUMNI</a>
+            <a href="contact.html" id="nvb-contact" class="navbaritem" data-transition="flow">CONTACT</a>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+
+
+        var srt = window.location.href.search("sigmaphidelta");
+        srt = srt + 14;
+
+        var end = window.location.href.search(".html");
+        var file = window.location.href.substring(srt, end);
+        //alert(file);
+
+        if (file == "org/index" || file == "index"){
+            $('#nvb-index').addClass('selnavbaritem');
+        }
+        if (file == "org/about" || file == "about"){
+            $('#nvb-about').addClass('selnavbaritem');
+        }
+        if (file == "org/rush" || file == "rush"){
+            $('#nvb-rush').addClass('selnavbaritem');
+        }
+        if (file == "org/events" || file == "events"){
+            $('#nvb-events').addClass('selnavbaritem');
+        }
+        if (file == "org/members" || file == "members"){
+            $('#nvb-members').addClass('selnavbaritem');
+        }
+        if (file == "org/alumni" || file == "alumni"){
+            $('#nvb-alumni').addClass('selnavbaritem');
+        }
+        if (file == "org/contact" || file == "contact"){
+            $('#nvb-contact').addClass('selnavbaritem');
+        }
+        $(".navbaritem").mouseenter(function() {
+
+            if (!($(this).hasClass("selnavbaritem"))){
+                $(this).animate({
+                    backgroundColor: "#c52625",
+                    fontSize: "20px"
+                }, 200 );
+            }
+        });
+        $(".navbaritem").mouseleave(function() {
+            if (!($(this).hasClass("selnavbaritem"))){
+                $(this).animate({
+                    backgroundColor: "#191919",
+                    fontSize: "16px"
+                }, 200 );
+            }
+        });
+
+    });
+</script>

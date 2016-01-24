@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sigma Phi Delta</title>
+    <link rel="shortcut icon" href="images/spdlogo.jpg">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="icons/flaticon.css">
+
+    <!-- Color Animations -->
+    <script src="js/jquery.color.js"></script>
+
+</head>
+
+<body id="pageone" class="posRel" style="width: 100%; height: 100%; overflow-x: hidden; background-color: #E3E3E3; margin:0; padding:0">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Content -->
+    <div class="posRel" style="min-width: 960px; margin: 65px auto 25px auto; text-align: center; min-height: 500px;">
+            <!-- Welcome Letter -->
+            <div class="inlineBlock opensans centerDiv vertAlignTop centerText" style="font-size: 20px; min-width: 480px; width: 30%; color: black;padding: 0 30px 50px 30px;">
+                <div class="" style="color: #F7302F; font-family: Amaranth; font-size: 36px; margin: 20px 0 25px 0;">Welcome to Sigma Phi Delta!</div>
+                <p>We are a <strong>professional</strong> and <strong>social</strong> engineering fraternity made up of the most excellent male engineers at
+                Stony Brook University. Our fraternity is dedicated to guiding its members towards professional and <strong>academic
+                success</strong> while enriching the college experience for engineering students.</p>
+            </div>
+
+            <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
+            <div id="slideshow" class="inlineBlock vertAlignTop" style="margin-bottom: 25px;">
+                <div>
+                    <img src="images/spd1.jpg"/>
+                </div>
+                <div>
+                    <img src="images/spd2.jpg"/>
+                </div>
+
+                <!--
+                <div>
+                    Pretty cool eh? This slide is proof the content can be anything.
+                </div>
+                -->
+            </div>
+
+            <!-- Interested in Rushing? -->
+            <div class="inlineBlock opensans centerDiv vertAlignTop centerText" style="font-size: 20px; min-width: 480px; width: 30%; color: black;padding: 0 30px 0 30px;">
+                <div class="" style="color: #F7302F; font-family: Amaranth; font-size: 36px; margin: 20px 0 25px 0;">Interested in joining?</div>
+                <p>The academic, professional, and networking opportunities are boundless as a member of Sigma Phi Delta.
+                Learn in detail about these opportunities and how to join Sigma Phi Delta at our RUSH page.</p>
+
+                <a href="rush.html" style="text-decoration: none;">
+                    <div id="rushBtn" class="vertAlignMid centerText" style="">SPRING RUSH 2016</div>
+                </a>
+            </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+<!--
+<div>
+Icons made by<a href="http://www.freepik.com" title="Freepik">Freepik</a>
+from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
+is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+</div>
+ -->
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $('#header').load("header.html");
+        $('#footer').load("footer.html");
+    });
+</script>
+
+<script>
+    $(document).on('page:load', function() {
+        $('#header').load("header.html");
+        $('#footer').load("footer.html");
+    });
+</script>
+
