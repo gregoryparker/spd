@@ -7,7 +7,7 @@ $(document).ready(function(){
     $("#slideshow1 > div:gt(0)").hide();
     setInterval(function() {
         $('#slideshow1 > div:first')
-            .fadeOut(1000)
+            .animate({'left':'533px'})
             .next()
             .fadeIn(1000)
             .end()
