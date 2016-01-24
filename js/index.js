@@ -7,31 +7,40 @@ $(document).ready(function(){
     $("#slideshow1 > div:gt(0)").hide();
     setInterval(function() {
         $('#slideshow1 > div:first')
+            .css({'left':'0'})
             .animate({'left':'533px'})
             .next()
-            .fadeIn(1000)
+            .fadeIn(1)
             .end()
             .appendTo('#slideshow1');
-    },  2500);
-
-    $("#slideshow2 > div:gt(0)").hide();
-    setInterval(function() {
         $('#slideshow2 > div:first')
-            .fadeOut(1000)
+            .css({'left':'0'})
+            .animate({'left':'533px'})
             .next()
-            .fadeIn(1000)
+            .fadeIn(1)
             .end()
             .appendTo('#slideshow2');
-    },  2500);
-
-    $("#slideshow3 > div:gt(0)").hide();
-    setInterval(function() {
         $('#slideshow3 > div:first')
-            .fadeOut(1000)
+            .css({'left':'0'})
+            .animate({'left':'533px'})
             .next()
-            .fadeIn(1000)
+            .fadeIn(1)
             .end()
             .appendTo('#slideshow3');
+        $('#slideshow4 > div:first')
+            .css({'left':'0'})
+            .animate({'left':'533px'})
+            .next()
+            .fadeIn(1)
+            .end()
+            .appendTo('#slideshow4');
+        $('#slideshow5 > div:first')
+            .css({'left':'0'})
+            .animate({'left':'533px'})
+            .next()
+            .fadeIn(1)
+            .end()
+            .appendTo('#slideshow5');
     },  2500);
 
 
