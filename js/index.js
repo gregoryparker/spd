@@ -8,40 +8,54 @@ $(document).ready(function(){
     setInterval(function() {
         $('#slideshow1 > div:first')
             .css({'left':'0'})
-            .animate({'left':'533px'})
+            .animate({'left':'530px'})
             .next()
             .fadeIn(1)
             .end()
             .appendTo('#slideshow1');
         $('#slideshow2 > div:first')
             .css({'left':'0'})
-            .animate({'left':'533px'})
+            .animate({'left':'530px'})
             .next()
             .fadeIn(1)
             .end()
             .appendTo('#slideshow2');
         $('#slideshow3 > div:first')
             .css({'left':'0'})
-            .animate({'left':'533px'})
+            .animate({'left':'530px'})
             .next()
             .fadeIn(1)
             .end()
             .appendTo('#slideshow3');
         $('#slideshow4 > div:first')
             .css({'left':'0'})
-            .animate({'left':'533px'})
+            .animate({'left':'530px'})
             .next()
             .fadeIn(1)
             .end()
             .appendTo('#slideshow4');
         $('#slideshow5 > div:first')
             .css({'left':'0'})
-            .animate({'left':'533px'})
+            .animate({'left':'530px'})
             .next()
             .fadeIn(1)
             .end()
             .appendTo('#slideshow5');
-    },  2500);
+        $('#slideshow6 > div:first')
+            .css({'left':'0'})
+            .animate({'left':'530px'})
+            .next()
+            .fadeIn(1)
+            .end()
+            .appendTo('#slideshow6');
+        $('#slideshow7 > div:first')
+            .css({'left':'0'})
+            .animate({'left':'530px'})
+            .next()
+            .fadeIn(1)
+            .end()
+            .appendTo('#slideshow7');
+    },  4500);
 
 
 
