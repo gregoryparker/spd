@@ -92,7 +92,7 @@
 
 
 /* Colors */
-.colWhite           {  color: white;                                }
+.colWhite, .colWhite:hover           {  color: white;               }
 .colBlack           {  color: black;                                }
 .colDefault         {  color: black;                                }
 
@@ -102,9 +102,12 @@
 .backColBlack       {  background-color: black;                     }
 
 /* Links */
-.textDecNone, .textDecNone:active, .textDecNone:visited {
+.textDecNone, .textDecNone:active, .textDecNone:visited, .textDecNone:hover {
     text-decoration: none;
 
+}
+strong{
+    color: #FF5655;
 }
 p{
     line-height: 30px;
@@ -198,7 +201,7 @@ p{
     bottom: 0;
     margin: 0;
 }
-.slideshow > div > img{
+.slideshow > div.imgCont > img{
     height: 100%;
     text-align: center;
 

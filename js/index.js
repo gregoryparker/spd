@@ -4,7 +4,7 @@
 
 
 $(document).ready(function(){
-    $("#slideshow1 > div:gt(0)").hide();
+    //$("#slideshow1 > div.imgCont:gt(0)").hide();
     setInterval(function() {
         $('#slideshow1 > div.imgCont:first')
             .css({'left':'0'})
