@@ -29,43 +29,46 @@
         }
 
         function drawCell(tr, val) {
-            var td = $("<td/>");
+            var td = $("<div>");
             tr.append(td);
             td.append(val);
+            var tv = $("</div>");
+            tr.append(tv);
             return td;
         }
-        function drawRow(table, rowData) {
+        function drawRow(parent, rowData) {
             if (rowData == null) return null;
             if (rowData.length == 0) return null;
-            var tr = $("<tr/>");
-            table.append(tr);
+            var tr = $("<div class='inlineBlock backColWhite bordRad5 shadow centerText' style='width: 250px;'>");
+            parent.append(tr);
             for(var c=0; c<rowData.length; c++) {
                 drawCell(tr, rowData[c]);
             }
-            return tr;
+            var vr = $("</div>");
+            parent.append(vr);
         }
 
-        function drawTable(parent) {
-            var table = $("<table/>");
-            parent.append(table);
-            return table;
-        }
+        //function drawTable(parent) {
+        //    var table = $("<table/>");
+        //    parent.append(table);
+        //    return table;
+        //}
 
         function readData(parent) {
             var data = spData;
-            var table = drawTable(parent);
+            //var table = drawTable(parent);
             var rowData = [];
 
             for(var r=0; r<data.length; r++) {
                 var cell = data[r]["gs$cell"];
                 var val = cell["$t"];
                 if (cell.col == 1) {
-                    drawRow(table, rowData);
+                    drawRow(parent, rowData);
                     rowData = [];
                 }
                 rowData.push(val);
             }
-            drawRow(table, rowData);
+            drawRow(parent, rowData);
         }
         $(document).ready(function(){
             readData($("#data"));
@@ -86,9 +89,8 @@
 
     <div id="data"></div>
 
-    <!-- Active Members-->
+    <!-- Active Members
     <div>
-        <!-- Member 1 -->
         <div class="inlineBlock backColWhite bordRad5 shadow" style="width: 250px;">
             <div class="" style="color: #F7302F; font-family: Amaranth; font-size: 28px; padding: 10px 0 10px 0;">Varun Shivakumar</div>
             <div class="">
@@ -117,7 +119,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
 
 
