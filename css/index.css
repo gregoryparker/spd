@@ -215,23 +215,18 @@ p{
 #slideshow7{  z-index: 2;  }
 
 
-/* Rush Page */
-
-.event:hover{
-    background-color: white;
-}
-
-.grid-item{
+/* Event Page */
+.event{
     width: 360px;
     padding: 8px;
     margin: 15px;
     border-radius: 5px;
     background-color: white;
 }
-.grid-item:hover{
+.event:hover{
     background-color: #F7302F;
 }
-.grid-item img.enlarge {
+.event img.enlarge {
     display: none;
     z-index: 50;
     position: absolute;
@@ -239,11 +234,16 @@ p{
     left: -50%;
 }
 /*
-.grid-item:hover img.enlarge{
+.event:hover img.enlarge{
     display: block;
 
 }
 */
+
+/* Members Page */
+.grid-item{
+    overflow: hidden;
+}
 
 /* Footer Icon */
 .icon:hover{
