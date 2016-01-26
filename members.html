@@ -112,11 +112,20 @@
              */
 
 
-            var divHeader = $(
-                    '<div class="" style="padding: 5px 8px 5px 8px;"> ' +
+            if (rowData[4]!= 'FALSE'){
+                var divHeader = $(
+                        '<div class="" style="padding: 5px 8px 5px 8px;"> ' +
                         '<div class="fontSize24" style="font-family: Lato; padding: 3px auto;">' + rowData[0] + '</div>' +
                         '<div class="fontSize14">'+rowData[4] +'</div>' +
-                    '</div>');
+                        '</div>');
+            }
+            else{
+                var divHeader = $(
+                        '<div class="" style="padding: 5px 8px 5px 8px;"> ' +
+                        '<div class="fontSize24" style="font-family: Lato; padding: 3px auto;">' + rowData[0] + '</div>' +
+                        '</div>');
+            }
+
             tr.append(divHeader);
 
 
@@ -213,7 +222,7 @@
 <!-- Content -->
 
 
-<div class="posRel" style="margin: 35px auto 25px auto; text-align: center; min-height: 530px; width: 875px;">
+<div class="posRel" style="margin: 35px auto 25px auto; text-align: center; min-height: 530px; min-width: 875px;width: 70%;">
 
     <!-- I don't know why this needs a padding left -> Added bordRed, evens out the DIV -->
     <div id="data" class="centerText centerDiv" style="padding: 0 0 0 3px;"></div>
