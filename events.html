@@ -24,6 +24,38 @@
     <!-- Masonry -->
     <script src="js/masonry.pkgd.min.js"></script>
 
+    <style>
+        .event {
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .event::after {
+            content: "";
+            border-radius: 5px;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .event:hover {
+            -webkit-transform: scale(1.25, 1.25);
+            transform: scale(1.25, 1.25);
+            z-index: 10;
+        }
+
+        .event:hover::after {
+            opacity: 1;
+        }
+    </style>
+
 
 </head>
 
@@ -51,25 +83,25 @@
         </div>-->
 
         <!-- Event -->
-        <div class="shadow grid-item event">
+        <div class="grid-item event">
             <a href="images/fliers/fall2015/clothingdrive.jpg"><img class="small" src="images/fliers/fall2015/clothingdrive.jpg" width="100%"  style=""></a>
             <img class="enlarge" src="images/fliers/fall2015/clothingdrive.jpg" width="200%" style="">
         </div>
 
         <!-- Event -->
-        <div class="shadow grid-item event">
+        <div class="grid-item event">
             <a href="images/fliers/fall2015/sexharassment.jpg"><img class="small" src="images/fliers/fall2015/sexharassment.jpg" width="100%" style=""></a>
             <img class="enlarge" src="images/fliers/fall2015/sexharassment.jpg" width="200%" style="">
         </div>
 
         <!-- Event -->
-        <div class="shadow grid-item event">
+        <div class="grid-item event">
             <a href="images/fliers/fall2015/bubbletea.jpg"><img class="small" src="images/fliers/fall2015/bubbletea.jpg" width="100%" style=""></a>
             <img class="enlarge" src="images/fliers/fall2015/bubbletea.jpg" width="200%" style="">
         </div>
 
         <!-- Event -->
-        <div class="shadow grid-item event">
+        <div class="grid-item event">
             <a href="images/fliers/fall2015/resumereview.jpg"><img class="small" src="images/fliers/fall2015/resumereview.jpg" width="100%" style=""></a>
             <img class="enlarge" src="images/fliers/fall2015/resumereview.jpg" width="200%" style="">
         </div>
