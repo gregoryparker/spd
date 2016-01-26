@@ -79,7 +79,9 @@
 
 /* Padding */
 .pad0               {  padding: 0;                                  }
+.pad8               {  padding: 16px;                               }
 
+.overflowHidden     {  overflow: hidden;                            }
 
 /* Position */
 .posAbs             {  position: absolute;                          }
@@ -174,7 +176,8 @@ p{
     font-size: 16px;
     text-decoration: none;
 
-    width: 14.285714285%;
+    /*width: 14.285714285%;/* for Alumni Page */
+    width: 16.6666667%; /* no alumni page */
     display: table-cell;
 }
 .navbaritem:active, .navbaritem:focus{
