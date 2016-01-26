@@ -78,6 +78,10 @@
                     container.append(input);
                     break;
                 case 8:
+                    input = $('<div class="opensans" style="">Company + Position: ' + val + '</div>');
+                    container.append(input);
+                    break;
+                case 9:
                         if (val != 'FALSE'){
                             input = $('<div style="max-height: 300px; overflow: hidden;"><img src="' + val +  '" width="100%" /></div>');
 
@@ -87,28 +91,88 @@
                         }
                     container.append(input);
                     break;
+
             }
 
         }
+        function eatingAss(bro){
+            console.log("I'm eating ass bro");
+        }
+
         function drawRow(parent, rowData) {
             if (rowData == null) return null;
             if (rowData.length == 0) return null;
-            var tr = $("<div class='inlineBlock backColWhite bordRad5 shadow grid-item opensans' style='width: 250px;margin: 20px;'>");
+            var tr = $("<div class='inlineBlock backColWhite bordRad5 shadow grid-item opensans' style=' text-align: left; width: 250px;margin: 20px;'>");
             parent.append(tr);
 
 
-            for(var c=0; c<rowData.length; c++) {
+            /*for(var c=0; c<rowData.length; c++) {
                 drawCell(tr, rowData[c], c);
             }
-
-            //var divHeader = $(
-            //        '<div class="fontSize24" style="font-family: Lato">' + rowData[0] + '</div>' +
-            //        '<div class="fontSize14">'+rowData +'</div>' +
-            //        '');
+             */
 
 
-            var vr = $("</div>");
-            parent.append(vr);
+            var divHeader = $(
+                    '<div class="" style="padding: 5px 8px 5px 8px;"> ' +
+                        '<div class="fontSize24" style="font-family: Lato; padding: 3px auto;">' + rowData[0] + '</div>' +
+                        '<div class="fontSize14">'+rowData[4] +'</div>' +
+                    '</div>');
+            tr.append(divHeader);
+
+
+            if (rowData[9] != 'FALSE'){
+                var divPicture = $(
+                        '<div class="" style="padding: 0;"> ' +
+                        '<div style="max-height: 300px; overflow: hidden;"><img src="' + rowData[9] +  '" width="100%" /></div>' +
+                        '</div>');
+                tr.append(divPicture);
+            }
+
+            var divContent = $(
+                    '<div class="" style="padding: 5px 8px 5px 8px;line-height: 35px;"> ' +
+                        '<div class="" style="">' +
+                            '<div><div class="cmCont colWhite boldText inlineBlock centerText fontSize18" style="line-height: 37px; margin: 3px auto;">&' + rowData[2] + ';</div>' + '<div class="inlineBlock" style="padding-left: 5px;">' + rowData[2] + '</div></div>' +
+                            '<div><div class="cmCont colWhite boldText inlineBlock centerText fontSize13" style="line-height: 37px; margin: 3px auto;">' + rowData[1] + '</div>' + '<div class="inlineBlock" style="padding-left: 5px;line-height: 20px;">' + getMajorLong(rowData[1]) + '</div></div>' +
+                            '<div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;">' + rowData[5] + '</div>' + '<div class="inlineBlock" style="padding-left: 5px;">' + rowData[7] + '</div></div>' +
+                            '<div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;"><div class="flaticon-house34 posRel" style="right: 13px;"></div></div>' + '<div class="inlineBlock" style="padding-left: 5px;">' + rowData[3] + '</div></div>' +
+                        '</div>' +
+                    '</div>');
+            tr.append(divContent);
+
+            if (rowData[6] != 'FALSE'){
+                var divDescription = $(
+                        '<div class="" style="padding: 5px 8px 5px 8px;line-height: 20px;">' + rowData[6] + ' </div>');
+                tr.append(divDescription);
+            }
+
+            var end = $("</div>");
+            parent.append(end);
+        }
+        function getMajorLong(major){
+            if (major=='ESG'){
+                return 'Engineering Science';
+            }
+            else if(major=='CIV'){
+                return 'Civil Engineering';
+            }
+            else if(major=='CE'){
+                return 'Computer Engineering';
+            }
+            else if(major=='CSE' || major=='CS'){
+                return 'Computer Science';
+            }
+            else if(major=='ISE' || major=='IS'){
+                return 'Information Systems';
+            }
+            else if(major=='MEC' || major=='ME'){
+                return 'Mechanical Engineering';
+            }
+            else if(major=='AMS' ){
+                return '<div class="fontSize14">Applied Math and Statistics</div>';
+            }
+            else{
+                return '';
+            }
         }
 
         //function drawTable(parent) {
@@ -138,7 +202,7 @@
             $('.grid-item').first().css('display', 'none');
         });
     </script>
-    <script src="https://spreadsheets.google.com/feeds/cells/1RFRQGJ4HN8BnmPHhUvwKjPvYCOswd4N7wkpJTQfhzzg/1/public/values?alt=json-in-script&callback=doData"></script>
+    <script src="https://spreadsheets.google.com/feeds/cells/1ZzVZpDJh6x55HRXbUJpfrdHFPyQDzU05eIN1RJe43ds/1/public/values?alt=json-in-script&callback=doData"></script>
 
 </head>
 
@@ -149,11 +213,10 @@
 <!-- Content -->
 
 
-<div class="posRel" style="width: 55%; margin: 35px auto 25px auto; text-align: center; min-height: 530px; min-width: 960px;">
+<div class="posRel" style="margin: 35px auto 25px auto; text-align: center; min-height: 530px; width: 875px;">
 
     <!-- I don't know why this needs a padding left -> Added bordRed, evens out the DIV -->
-    <div id="data" class="centerText centerDiv" style="padding-left: 50px;"></div>
-
+    <div id="data" class="centerText centerDiv" style="padding: 0 0 0 3px;"></div>
     <!-- Active Members
     <div>
         <div class="inlineBlock backColWhite bordRad5 shadow" style="width: 250px;">
