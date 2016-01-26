@@ -24,9 +24,8 @@
     <style>
         .grid {
             position: relative;
-            margin: 0 auto;
-            padding: 1em 0 4em;
-            max-width: 1000px;
+            margin: 0;
+            padding: 0;
             text-align: center;
         }
 
@@ -35,9 +34,10 @@
             position: relative;
             float: left;
             overflow: hidden;
-            margin: 10px 1%;
-            width: 480px;
-            height: 360px;
+            /*margin: 10px 1%;*/
+            margin: 0;
+            width: 470px;
+            height: 270px;
             background: #3085a3;
             text-align: center;
             cursor: pointer;
@@ -48,12 +48,12 @@
             display: block;
             min-height: 100%;
             max-width: 100%;
-            opacity: 0.8;
+            opacity: 0.6;
         }
 
         .grid figure figcaption {
             color: #fff;
-            text-transform: uppercase;
+            /*text-transform: uppercase;*/
             font-size: 1.25em;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -83,16 +83,17 @@
             opacity: 0;
         }
 
-        .grid figure h2 {
-            word-spacing: -0.15em;
-            font-weight: 300;
+        .grid figure div.h2 {
+            font-weight: 200;
+            font-family: Amaranth, sans-serif;
+            font-size: 1.5em;
         }
 
-        .grid figure h2 span {
-            font-weight: 800;
+        .grid figure div.h2 span {
+            font-weight: bold;
         }
 
-        .grid figure h2,
+        .grid figure div.h2,
         .grid figure p {
             margin: 0;
         }
@@ -101,10 +102,6 @@
             letter-spacing: 1px;
             font-size: 68.5%;
         }
-        /*---------------*/
-        /***** Ming *****/
-        /*---------------*/
-
         figure.effect-ming {
             background: #030c17;
         }
@@ -117,10 +114,10 @@
 
         figure.effect-ming figcaption::before {
             position: absolute;
-            top: 30px;
-            right: 30px;
-            bottom: 30px;
-            left: 30px;
+            top: 20px;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
             border: 2px solid #fff;
             box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
             content: '';
@@ -131,22 +128,25 @@
             transform: scale3d(1.4,1.4,1);
         }
 
-        figure.effect-ming h2 {
-            margin: 20% 0 10px 0;
+        figure.effect-ming div.h2 {
+            margin: 10% 0 10px 0;
             -webkit-transition: -webkit-transform 0.35s;
             transition: transform 0.35s;
         }
 
         figure.effect-ming p {
-            padding: 1em;
+            padding: 10px 40px;
             opacity: 0;
             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
             transition: opacity 0.35s, transform 0.35s;
             -webkit-transform: scale(1.5);
             transform: scale(1.5);
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            line-height: 21px;
         }
 
-        figure.effect-ming:hover h2 {
+        figure.effect-ming:hover div.h2 {
             -webkit-transform: scale(0.9);
             transform: scale(0.9);
         }
@@ -177,67 +177,64 @@
 <!-- Content -->
 <div class="posRel" style="width: 960px; margin: 30px auto 29px auto; text-align: center; min-height: 500px;">
     <!-- Sigma Phi Delta -->
-    <div class="posRel inlineBlock vertAlignTop leftText overflowHidden" style="width: 470px;height: 270px;">
-        <img src="images/symbols/sigphisknowengineering.png" height="100%" width="100%" />
-        <div class="posAbs top0 width100 height100 backColWhite" style="opacity:0.6;"></div>
-        <div class="posAbs pad8" style='z-index: 2; top:0;height: 100%; width: 90%; color: black;'>
-            <div class="" style="font-family: Amaranth; font-size: 28px; margin: 0 0 25px 0;z-index: 1;">Learn More About Sigma Phi Delta</div>
-            <div class="opensans" style="font-size: 20px;z-index: 1;">
-                Check our
-                <a href="http://www.sigmaphidelta.org">International Fraternity's site</a>
-                for information on all of our leadership opportunities, our active chapters, and much more
-            </div>
-        </div>
+    <div class="grid inlineBlock posRel inlineBlock vertAlignTop overflowHidden" style="">
+        <figure class="effect-ming" style=''>
+            <img src="images/symbols/spdpic.jpg" height="100%" width="100%" style="opacity: 0.4;"/>
+            <figcaption>
+                <div class="h2">Learn More About <span>Sigma Phi Delta</span>
+                    <div class="fontSize20 centerText posRel" style="color: white; margin: 0 auto;height:5px;bottom: 10px;">&middot;&middot;&middot;</div>
+                </div>
+                <p>International Fraternity's site</a>
+                    for information on all of our leadership opportunities, our active chapters, and much more</p>
+                <a href="http://www.sigmaphidelta.org">View more</a>
+            </figcaption>
+        </figure>
     </div>
 
     <!-- Instagram Page -->
-    <div class="posRel inlineBlock vertAlignTop leftText overflowHidden" style="width: 470px;height: 270px; left: -5px;">
-        <img src="http://www.adweek.com/files/imagecache/node-detail/news_article/tt-instagram-hed-2013.jpg" height="100%" width="100%" />
-        <div class="posAbs top0 width100 height100 backColWhite" style="opacity:0.6;"></div>
-        <div class="posAbs pad8" style='z-index: 2; top:0;height: 100%; width: 90%; color: black;'>
-            <div class="" style=" font-family: Amaranth; font-size: 28px; margin: 0 0 25px 0;">Follow Our Instagram</div>
-            <div class="opensans" style="font-size: 20px;">
-                Follow us on Instagram to see the brothers in action
-            </div>
-        </div>
+    <div class="grid inlineBlock posRel inlineBlock vertAlignTop overflowHidden" style="left:-5px;">
+        <figure class="effect-ming" style=''>
+            <img src="http://www.adweek.com/files/imagecache/node-detail/news_article/tt-instagram-hed-2013.jpg" height="100%" width="100%" style="opacity: 0.4;"/>
+            <figcaption>
+                <div class="h2">Follow Our <span>Instagram</span>
+                    <div class="fontSize20 centerText posRel" style="color: white; margin: 0 auto;height:5px;bottom: 10px;">&middot;&middot;&middot;</div>
+                </div>
+                <p>Follow us on Instagram to see the brothers in action</p>
+                <a href="https://www.instagram.com/spdbh/">View more</a>
+            </figcaption>
+        </figure>
     </div>
 
 
     <!-- Facebook Page -->
-    <div class="posRel inlineBlock vertAlignTop leftText overflowHidden" style="width: 470px;height: 270px;">
-        <img src="http://tech.thaivisa.com/wp-content/uploads/2015/01/facebook-logo1.jpg" height="100%" width="100%" />
-        <div class="posAbs top0 width100 height100 backColWhite" style="opacity:0.6;"></div>
-        <div class="posAbs pad8" style='z-index: 2; top:0;height: 100%; width:90%; color: black;'>
-            <div class="" style="font-family: Amaranth; font-size: 28px; margin: 0 0 25px 0;">Check Out Our Facebook Page</div>
-            <div class="opensans" style="font-size: 20px;">
-                Take a look at our Facebook page for our philanthropic and professional events
-            </div>
-        </div>
+    <div class="grid inlineBlock posRel inlineBlock vertAlignTop overflowHidden" style="">
+        <figure class="effect-ming" style=''>
+            <img src="http://tech.thaivisa.com/wp-content/uploads/2015/01/facebook-logo1.jpg" height="100%" width="100%" style="opacity: 0.4;"/>
+            <figcaption>
+                <div class="h2">Like Us On <span>Facebook</span>
+                    <div class="fontSize20 centerText posRel" style="color: white; margin: 0 auto;height:5px;bottom: 10px;">&middot;&middot;&middot;</div>
+                </div>
+                <p>Take a look at our Facebook page for our philanthropic and professional events</p>
+                <a href="https://www.facebook.com/spdbetaeta/?fref=ts">View more</a>
+            </figcaption>
+        </figure>
     </div>
 
     <!-- Rush Chairman -->
-    <div class="posRel inlineBlock vertAlignTop leftText overflowHidden" style="width: 470px;height: 270px;left:-5px;">
-        <img src="images/symbols/sigphisknowengineering.png" height="100%" width="100%" />
-        <div class="posAbs top0 width100 height100 backColWhite" style="opacity:0.6;"></div>
-        <div class="posAbs pad8" style='z-index: 2; top:0;height: 100%; width: 90%; color: black;'>
-            <div class="" style="font-family: Amaranth; font-size: 28px; margin: 0 0 25px 0;">Contact Our Rush Chairman</div>
-            <div class="opensans" style="font-size: 20px;">
-                If you are interested in joining Sigma Phi Delta and taking advantage of all of its academic, professional, and social opportunities,
-                contact our Rush Chairman at rush@spdbetaeta.org
-            </div>
-        </div>
-    </div>
-
-    <div class="grid">
+    <div class="grid inlineBlock posRel inlineBlock vertAlignTop overflowHidden" style="left: -5px;">
         <figure class="effect-ming" style=''>
-            <img src="http://38.media.tumblr.com/tumblr_lk0jj25G2m1qf347n.jpg" alt="img01"/>
+            <img src="https://pbs.twimg.com/profile_images/2620742352/banner1.jpg" height="100%" width="100%" style="opacity: 0.4;"/>
             <figcaption>
-                <h2>Nice <span>Lily</span></h2>
-                <p>Lily likes to play with crayons and pencils</p>
+                <div class="h2 posRel centerText">Contact Our <span>Rush Chairman</span>
+                    <div class="fontSize20 centerText posRel" style="color: white; margin: 0 auto;height:5px;bottom: 10px;">&middot;&middot;&middot;</div>
+                </div>
+                <p>If you are interested in joining Sigma Phi Delta and taking advantage of all of its academic, professional, and social opportunities,
+                    contact our Rush Chairman at <strong>rush@spdbetaeta.org</strong></p>
                 <a href="#">View more</a>
             </figcaption>
         </figure>
     </div>
+
 
 
 </div>
