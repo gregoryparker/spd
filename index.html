@@ -22,22 +22,65 @@
     <script src="js/jquery.color.js"></script>
 
     <script type="text/javascript">
-        <!--
         if (screen.width <= 699) {
             document.location = "mobile.html";
         }
-        else if (screen.width <= 1900) {
-            document.location = "indexa.html";
-        }
-        //-->
     </script>
     <script language=javascript>
-        <!--
         if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
             location.replace("http://beta-eta.sigmaphidelta.org/mobile.html");
         }
-        -->
     </script>
+    <style>
+        /* Slideshow */
+        .slideshow {
+            margin:-2px;
+            padding: 0;
+            position: relative;
+            width: 530px;
+            height: 400px;
+            /*border: 10px solid #191919;*/
+            /*background-color: #191919;*/
+            /*overflow: hidden;*/
+        }
+
+        .slideshow > div.imgCont {
+            position: absolute;
+            top: 0;
+            left: 530px;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+        }
+        .imgCont img{
+            height: 400px; width: 530px;
+        }
+
+        #slideshow3 div.imgCont img, #slideshow4{
+            height: 450px; width: 600px;
+        }
+        #slideshow3 div.imgCont img{
+            bottom: 25px; position: relative;;
+        }
+        #slideshow4 div.imgCont{
+           left: 600px;
+        }
+        .blackOverlay{
+            position: absolute; height: 400px; width:530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 100%;
+        }
+        #slideshowBorder{
+            position: absolute;
+            height: 440px;
+            width: 590px;
+            border: 10px solid #363636;
+            z-index: 10;
+            left: 650px;
+            bottom: 21px;
+            -webkit-box-shadow: 0 0 15px 0 rgba(38,38,38,1);
+            -moz-box-shadow: 0 0 15px 0 rgba(38,38,38,1);
+            box-shadow: 0 0 15px 0 rgba(38,38,38,1);
+        }
+    </style>
 
 </head>
 
@@ -47,114 +90,115 @@
 
 <!-- Content -->
 <div class="posRel" style="width: 100%; margin:15px auto 25px auto; text-align: center; min-height: 453px;overflow:hidden;">
-    <div style="position: absolute; height: 440px; width: 590px; border: 10px solid #363636;z-index: 10; left: 650px;-webkit-box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);-moz-box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);bottom: 25px;"></div>
 
-    <div class=" posRel" style="width: 4000px; text-align: left; left: -1460px;box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.4);-moz-box-shadow: 0 0 20px rgba(0,0,0,0.4);height: 398px;margin: 90px auto 50px;">
+    <div id="slideshowBorder" style=""></div>
+
+    <div class=" posRel" style="width: 4000px; text-align: left; height: 398px;margin: 90px auto 50px;left: -1460px;
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.4);-moz-box-shadow: 0 0 20px rgba(0,0,0,0.4);box-shadow: 0 0 20px rgba(0,0,0,0.4);">
 
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow7" class="slideshow inlineBlock vertAlignTop" style="height: 400px; width: 530px;">
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="100%" width="100%"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="100%" width="100%"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="100%" width="100%"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="100%" width="100%"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="100%" width="100%"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="100%" width="100%"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="100%" width="100%"/></div>
-            <div class="posAbs" style="height: 100%; width: 100%; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 100%;"></div>
+        <div id="slideshow7" class="slideshow inlineBlock vertAlignTop ">
+            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" /></div>
+            <div class="blackOverlay" style=""></div>
         </div>
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow1" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
+        <div id="slideshow1" class="slideshow inlineBlock vertAlignTop ">
+            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" /></div>
+            <div class="blackOverlay" style=""></div>
         </div>
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow2" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
+        <div id="slideshow2" class="slideshow inlineBlock vertAlignTop ">
+            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" /></div>
             <!-- Welcome Letter-->
-            <div class="inlineBlock opensans centerDiv vertAlignTop centerText posAbs" style="left: 540px; font-size: 20px; height: 400px; width: 500px; color: white;padding: 0 8px 0 8px;z-index: 11;">
+            <div class="inlineBlock opensans centerDiv vertAlignTop centerText posAbs colWhite fonSize20 height100" style="left: 530px; width: 500px;padding: 0 12px;z-index: 11;">
                 <div class="" style=" font-family: Amaranth; font-size: 36px; margin: 25px 0 25px 0;">Welcome to Sigma Phi Delta!</div>
-                <p>We are a <strong>professional</strong> and <strong>social</strong> engineering fraternity made up of the most excellent male engineers at
+                <div style="font-size: 20px;">We are a <strong>professional</strong> and <strong>social</strong> engineering fraternity made up of the most excellent male engineers at
                     Stony Brook University. Our fraternity is dedicated to guiding its members towards professional and <strong>academic
-                        success</strong> while enriching the college experience for engineering students.</p>
+                        success</strong> while enriching the college experience for engineering students.
+                </div>
             </div>
+            <div class="blackOverlay" style=""></div>
         </div>
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow3" class="slideshow inlineBlock vertAlignTop" style="height: 450px;width: 530px;bottom: 25px;">
-            <div style="position: absolute; height: 50px; top: -25px; width: 530px;background-color: #E3E3E3;z-index:10;"></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="450px" width="600px"/></div>
-            <div style="position: absolute; height: 50px; bottom: 0; width: 530px;background-color: #E3E3E3;z-index:10;"></div>
+        <div id="slideshow3" class="slideshow inlineBlock vertAlignTop ">
+            <div style="position: absolute; height: 50px; top: -25px; width: 100%;background-color: #E3E3E3;z-index:10;"></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" /></div>
+           <div style="position: absolute; height: 50px; bottom: -25px; width: 100%;background-color: #E3E3E3;z-index:10;"></div>
         </div>
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow4" class="slideshow inlineBlock vertAlignTop" style="margin-left:60px;">
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
+        <div id="slideshow4" class="slideshow inlineBlock vertAlignTop ">
+            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" /></div>
             <!-- Interested in Rushing?-->
-            <div class="opensans centerDiv vertAlignTop centerText posAbs" style="left: 550px; font-size: 20px; height: 400px; width: 500px; color: white;padding: 0 8px 0 8px;z-index: 11;">
+            <div class="opensans centerDiv vertAlignTop centerText posAbs" style="left: 605px; font-size: 20px; height: 100%; width: 500px; color: white;padding: 0 12px;z-index: 11;">
                 <div class="" style="color: white; font-family: Amaranth; font-size: 36px; margin: 25px 0 25px 0;">Interested in joining?</div>
-                <p>The academic, professional, and networking opportunities are boundless as a member of Sigma Phi Delta.
-                    Learn in detail about these opportunities and how to join Sigma Phi Delta at our RUSH page.</p>
+                <div style="font-size: 20px;">The academic, professional, and networking opportunities are boundless as a member of Sigma Phi Delta.
+                    Learn in detail about these opportunities and how to join Sigma Phi Delta at our RUSH page.
+                </div>
 
-                <a href="rush.html" style="text-decoration: none;">
+                <a href="rush.html" class="textDecNone">
                     <div id="rushBtn" class="vertAlignTop centerText" style="">SPRING RUSH 2016</div>
                 </a>
             </div>
+            <div class="blackOverlay" style=""></div>
         </div>
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow5" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
+        <div id="slideshow5" class="slideshow inlineBlock vertAlignTop " style="">
+            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" /></div>
+            <div class="blackOverlay" style=""></div>
 
         </div>
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow6" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
-
-
+        <div id="slideshow6" class="slideshow inlineBlock vertAlignTop ">
+            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" /></div>
+            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" /></div>
+            <div class="blackOverlay" style=""></div>
         </div>
 
 
