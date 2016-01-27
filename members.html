@@ -142,10 +142,10 @@
             var divContent = $(
                     '<div class="" style="padding: 5px 8px 5px 8px;line-height: 35px;"> ' +
                         '<div class="" style="">' +
-                            '<div><div class="cmCont colWhite boldText inlineBlock centerText fontSize18" style="line-height: 37px; margin: 3px auto;">&' + rowData[2] + ';</div>' + '<div class="inlineBlock" style="padding-left: 5px;">' + rowData[2] + '</div></div>' +
-                            '<div><div class="cmCont colWhite boldText inlineBlock centerText fontSize13" style="line-height: 37px; margin: 3px auto;">' + rowData[1] + '</div>' + '<div class="inlineBlock" style="padding-left: 5px;line-height: 20px;">' + getMajorLong(rowData[1]) + '</div></div>' +
-                            '<div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;">' + rowData[5] + '</div>' + '<div class="inlineBlock" style="padding-left: 5px;">' + rowData[7] + '</div></div>' +
-                            '<div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;"><div class="flaticon-house34 posRel" style="right: 13px;"></div></div>' + '<div class="inlineBlock" style="padding-left: 5px;">' + rowData[3] + '</div></div>' +
+                            '<div id="class" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize18" style="line-height: 37px; margin: 3px auto;">&' + rowData[2] + ';</div>' + '<div class="inlineBlock" style="padding-left: 10px;">' + rowData[2] + '</div></div></div>' +
+                            '<div id="major" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize13" style="line-height: 37px; margin: 3px auto;">' + rowData[1] + '</div>' + '<div class="inlineBlock" style="padding-left: 10px;line-height: 20px;">' + getMajorLong(rowData[1]) + '</div></div></div>' +
+                            '<div id="membership" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;">' + rowData[5] + '</div>' + '<div class="inlineBlock" style="padding-left: 10px;">' + rowData[7] + '</div></div></div>' +
+                            '<div id="hometown" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;"><div class="flaticon-house34 posRel" style="right: 13px;"></div></div>' + '<div class="inlineBlock" style="padding-left: 10px;">' + rowData[3] + '</div></div></div>' +
                         '</div>' +
                     '</div>');
             tr.append(divContent);
@@ -210,7 +210,11 @@
         }
         $(document).ready(function(){
             readData($("#data"));
-            $('.grid-item').first().css('display', 'none');
+            $('.grid-item').first().html('').css('display', 'none');
+
+            $('.categ').mouseenter(function(){
+                /*alert($(this).find('.cmCont').text());*/
+            });
         });
     </script>
     <script src="https://spreadsheets.google.com/feeds/cells/1ZzVZpDJh6x55HRXbUJpfrdHFPyQDzU05eIN1RJe43ds/1/public/values?alt=json-in-script&callback=doData"></script>

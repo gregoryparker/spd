@@ -42,6 +42,7 @@
 .centerText         {  text-align: center;                          }
 .leftText         {  text-align: left;                          }
 .centerDiv          {  margin-left: auto; margin-right: auto;       }
+.centerVert          {display:flex;text-align: left;align-items:center;}
 
 .floatLeft          {  float: left;                                 }
 .floatRight         {  float: right;                                }
