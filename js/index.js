@@ -4,6 +4,9 @@
 
 
 $(document).ready(function(){
+
+
+
     //$("#slideshow1 > div.imgCont:gt(0)").hide();
     setInterval(function() {
         $('#slideshow1 > div.imgCont:first')
@@ -56,5 +59,7 @@ $(document).ready(function(){
             .end()
             .appendTo('#slideshow7');
     },  4500);
+
+
 
 });
