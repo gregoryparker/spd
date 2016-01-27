@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="images/symbols/spdlogo.jpg">
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script language="javascript" type="text/javascript" src="js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
     <!-- Fonts -->
@@ -21,6 +20,37 @@
     <!-- Color Animations -->
     <script src="js/jquery.color.js"></script>
 
+    <script>
+        /**
+         * Created by vshivakumar on 12/9/15.
+         */
+
+
+        $(document).ready(function(){
+            $("#slideshow > div:gt(0)").hide();
+
+            setInterval(function() {
+                $('#slideshow > div:first')
+                        .fadeOut(1000)
+                        .next()
+                        .fadeIn(1000)
+                        .end()
+                        .appendTo('#slideshow');
+            },  3000);
+
+        });
+    </script>
+
+    <style>
+        .imgCont{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+
 </head>
 
 <body id="pageone" class="posRel centerText" style="width: 100%; height: 100%; overflow-x: hidden; background-color: #E3E3E3; margin:0; padding:0; ">
@@ -28,7 +58,7 @@
 <div id="header"></div>
 
 <!-- Welcome Letter-->
-<div class="inlineBlock opensans centerDiv vertAlignTop centerText posRel bordRad5 shadow" style="background-color: #464646; top: 50px; font-size: 20px;margin-bottom: 50px; height: 300px; width: 500px; color: white;padding: 0 8px 0 8px;z-index: 11;">
+<div class="inlineBlock opensans centerDiv vertAlignTop centerText posRel bordRad5 shadow" style="background-color: #464646; top: 50px; font-size: 20px;margin-bottom: 50px;width: 500px; color: white;padding: 0 8px 0 8px;z-index: 11;">
     <div class="" style=" font-family: Amaranth; font-size: 36px; margin: 25px 0 25px 0;">Welcome to Sigma Phi Delta!</div>
     <p>We are a <strong>professional</strong> and <strong>social</strong> engineering fraternity made up of the most excellent male engineers at
         Stony Brook University. Our fraternity is dedicated to guiding its members towards professional and <strong>academic
@@ -36,62 +66,11 @@
 </div>
 
 <!-- Content -->
-<div class="posRel" style="bottom: 0;width: 700px; margin:15px auto 25px auto; text-align: center; min-height: 453px;overflow:hidden;">
-    <div style="position: absolute; height: 440px; width: 590px; border: 10px solid #363636;z-index: 10; left: 45px;-webkit-box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);-moz-box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);bottom: 22px;"></div>
+<div class="posRel shadow" style="bottom: 0;width: 530px; margin:25px auto 0 auto; text-align: center; height: 400px;overflow:hidden;border: 10px solid #464646;">
 
-    <div class=" posRel" style="width: 4000px; text-align: left; left: -2070px;box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.4);-moz-box-shadow: 0 0 20px rgba(0,0,0,0.4);height: 398px;margin: 90px auto 50px;">
-        <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow7" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
-        </div>
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow1" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
-        </div>
-        <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow2" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
-
-        </div>
-
-        <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow3" class="slideshow inlineBlock vertAlignTop" style="height: 450px;width: 530px;bottom: 25px;">
-            <div style="position: absolute; height: 50px; top: -25px; width: 530px;background-color: #E3E3E3;z-index:10;"></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="450px" width="600px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="450px" width="600px"/></div>
-            <div style="position: absolute; height: 50px; bottom: 0; width: 530px;background-color: #E3E3E3;z-index:10;"></div>
-        </div>
-
-        <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow4" class="slideshow inlineBlock vertAlignTop" style="margin-left:60px;">
+        <div id="slideshow" class="slideshow inlineBlock vertAlignTop" style="">
             <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
             <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
             <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
@@ -99,50 +78,16 @@
             <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
             <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
             <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
-
         </div>
-
-        <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow5" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
-
-        </div>
-
-        <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
-        <div id="slideshow6" class="slideshow inlineBlock vertAlignTop" style="">
-            <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" height="400px" width="530px"/></div>
-            <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" height="400px" width="530px"/></div>
-            <div class="posAbs" style="height: 400px; width: 530px; background-color: #464646; opacity: 0.75; z-index: 10; top: 0;left: 530px;"></div>
-
-
-        </div>
-
-
-    </div>
-
-
 </div>
 
 <!-- Interested in Rushing?-->
-<div class="inlineBlock opensans centerDiv vertAlignTop centerText posRel bordRad5 shadow" style="background-color: #464646; top: 50px; font-size: 20px;margin-bottom: 50px; height: 300px; width: 500px; color: white;padding: 0 8px 0 8px;z-index: 11;">
+<div class="inlineBlock opensans centerDiv vertAlignTop centerText posRel bordRad5 shadow" style="background-color: #464646; top: 50px; font-size: 20px;margin-bottom: 50px; width: 500px; color: white;padding: 0 8px 0 8px;z-index: 11;">
     <div class="" style=" font-family: Amaranth; font-size: 36px; margin: 25px 0 25px 0;">Interested in joining?</div>
     <p>The academic, professional, and networking opportunities are boundless as a member of Sigma Phi Delta.
         Learn in detail about these opportunities and how to join Sigma Phi Delta at our RUSH page.</p>
     <a href="rush.html" style="text-decoration: none;">
-        <div id="rushBtn" class="vertAlignTop centerText" style="">SPRING RUSH 2016</div>
+        <div id="rushBtn" class="vertAlignTop centerText" style="height: 6%;">SPRING RUSH 2016</div>
     </a>
 </div>
 
