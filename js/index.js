@@ -57,10 +57,4 @@ $(document).ready(function(){
             .appendTo('#slideshow7');
     },  4500);
 
-
-
-
-
-
-
 });
