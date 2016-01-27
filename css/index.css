@@ -126,13 +126,11 @@ p{
 #rushBtn{
     border-bottom: 4px solid #DE2B2A;
     cursor: pointer;
-    width: 60%;
-    height: 4.2%;
     background-color: #F7302F;
     color: white;
     border-radius: 20px;
-    padding: 15px;
-    font-size: 1.75vw;
+    padding: 15px 15px 5px 15px;
+    font-size: 2vw;
     margin: 50px auto;
     font-family: Adam, sans-serif;
     position: relative;
