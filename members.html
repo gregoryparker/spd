@@ -213,6 +213,18 @@
             $('.grid-item').first().html('').css('display', 'none');
 
         });
+        document.onreadystatechange = function () {
+            var state = document.readyState;
+            if (state == 'interactive') {
+                document.getElementById('contents').style.visibility="hidden";
+            } else if (state == 'complete') {
+                setTimeout(function(){
+                    document.getElementById('interactive');
+                    document.getElementById('load').style.visibility="hidden";
+                    document.getElementById('contents').style.visibility="visible";
+                },1000);
+            }
+        }
     </script>
     <script src="https://spreadsheets.google.com/feeds/cells/1ZzVZpDJh6x55HRXbUJpfrdHFPyQDzU05eIN1RJe43ds/1/public/values?alt=json-in-script&callback=doData"></script>
 
@@ -227,9 +239,14 @@
 
 <div class="posRel" style="margin: 35px auto 25px auto; text-align: center; min-height: 530px; width: 875px;">
 
-    <!-- I don't know why this needs a padding left -> Added bordRed, evens out the DIV -->
-    <div id="data" class="centerText centerDiv" style="padding: 0 0 0 3px;"></div>
+    <div id="load">
+        <img src="images/symbols/loading.gif" height="200px" width="200px"/>
+    </div>
 
+    <div id="contents">
+        <!-- I don't know why this needs a padding left -> Added bordRed, evens out the DIV -->
+        <div id="data" class="centerText centerDiv" style="padding: 0 0 0 3px;"></div>
+    </div>
 
 </div>
 

@@ -263,6 +263,12 @@ p{
     border-radius: 50%;
     background-color:  #F7302F;
 }
+#load{
+    width: 880px;
+    height:600px;
+    position:absolute;
+    z-index:9999;
+}
 
 /* Footer Icon */
 .icon:hover{
