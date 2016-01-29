@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Sigma Phi Delta</title>
+    <title>Sigma Phi Delta at Stony Brook</title>
     <link rel="shortcut icon" href="images/symbols/spdlogo.jpg">
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -52,35 +52,35 @@
                     container.append(input);
                     break;
                 case 1:
-                    input = $('<div class="opensans" style="">Major: ' + val + '</div>');
+                    input = $('<div class="roboto" style="">Major: ' + val + '</div>');
                     container.append(input);
                     break;
                 case 2:
-                    input = $('<div class="opensans" style="">Pledge Class: ' + val + '</div>');
+                    input = $('<div class="roboto" style="">Pledge Class: ' + val + '</div>');
                     container.append(input);
                     break;
                 case 3:
-                    input = $('<div class="opensans" style="">Hometown: ' + val + '</div>');
+                    input = $('<div class="roboto" style="">Hometown: ' + val + '</div>');
                     container.append(input);
                     break;
                 case 4:
-                    input = $('<div class="opensans" style="">Position: ' + val + '</div>');
+                    input = $('<div class="roboto" style="">Position: ' + val + '</div>');
                     container.append(input);
                     break;
                 case 5:
-                    input = $('<div class="opensans" style="">Graduation Date: ' + val + '</div>');
+                    input = $('<div class="roboto" style="">Graduation Date: ' + val + '</div>');
                     container.append(input);
                     break;
                 case 6:
-                    input = $('<div class="opensans" style="">Description: ' + val + '</div>');
+                    input = $('<div class="roboto" style="">Description: ' + val + '</div>');
                     container.append(input);
                     break;
                 case 7:
-                    input = $('<div class="opensans" style="">Membership: ' + val + '</div>');
+                    input = $('<div class="roboto" style="">Membership: ' + val + '</div>');
                     container.append(input);
                     break;
                 case 8:
-                    input = $('<div class="opensans" style="">Company + Position: ' + val + '</div>');
+                    input = $('<div class="roboto" style="">Company + Position: ' + val + '</div>');
                     container.append(input);
                     break;
                 case 9:
@@ -89,7 +89,7 @@
 
                         }
                         else{
-                            input = $('<div class="opensans" style="">Picture: ' + val + '</div>');
+                            input = $('<div class="roboto" style="">Picture: ' + val + '</div>');
                         }
                     container.append(input);
                     break;
@@ -100,7 +100,7 @@
         function drawRow(parent, rowData) {
             if (rowData == null) return null;
             if (rowData.length == 0) return null;
-            var tr = $("<div class='inlineBlock backColWhite bordRad5 shadow grid-item opensans' style=' text-align: left; width: 250px;margin: 20px;'>");
+            var tr = $("<div class='inlineBlock backColWhite bordRad5 shadow grid-item roboto' style=' text-align: left; width: 250px;margin: 20px;'>");
             parent.append(tr);
 
 
@@ -177,6 +177,12 @@
             else if(major=='AMS' ){
                 return '<div class="fontSize14">Applied Math and Statistics</div>';
             }
+            else if(major=='ES' ){
+                return 'Environmental Science';
+            }
+            else if(major=='TSM' ){
+                return 'Technical Systems Management';
+            }
             else{
                 return '';
             }
@@ -206,7 +212,6 @@
         }
         $(document).ready(function(){
             readData($("#data"));
-            $('.grid-item').first().html('').css('display', 'none');
 
         });
         document.onreadystatechange = function () {

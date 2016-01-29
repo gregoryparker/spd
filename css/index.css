@@ -6,17 +6,11 @@
  *
  */
 
-/* FONT FACES
-@font-face  {  font-family: "Geo";        src: url('fonts/Geomanist-Regular.otf')   format("opentype");     }
-@font-face  {  font-family: "DStroke";    src: url('fonts/Distant_Stroke.otf')      format("opentype");     }
-@font-face  {  font-family: "Roboto";     src: url('fonts/Roboto-Regular.ttf')      format("truetype");     }
-@font-face  {  font-family: "Porter";     src: url('fonts/Porter Bold.ttf')         format("truetype");     }
-*/
 @font-face  {  font-family: "Amaranth";      src: url('../fonts/Amaranth-Regular.ttf') format("truetype");     }
 @font-face  {  font-family: "Liberation Sans";      src: url('../fonts/LiberationSans-Regular.ttf') format("truetype");     }
 @font-face  {  font-family: "Adam";       src: url('../fonts/adamcg.otf')           format("opentype");     }
 
-.opensans   {  font-family: 'Roboto', sans-serif;                                                        }
+.roboto {  font-family: 'Roboto', sans-serif;                                                        }
 
 /* Font Sizes : 10 to 20, 20 to 40 in multiples of 4 */
 
@@ -107,12 +101,15 @@
 .backColWhite       {  background-color: white;                     }
 .backColLGray       {  background-color: lightgrey;                 }
 .backColBlack       {  background-color: black;                     }
+.backColBackGround  {  background-color: #e3e3e3;                   }
 
 /* Links */
 .textDecNone, .textDecNone:active, .textDecNone:visited, .textDecNone:hover {
     text-decoration: none;
 
 }
+
+/* Text Content */
 strong{
     color: #FF5655;
 }
@@ -120,7 +117,6 @@ p{
     line-height: 30px;
 }
 
-/* Text Shadow text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 
 /* Rush Button */
 #rushBtn{
@@ -251,14 +247,6 @@ p{
 }
 
 
-
-/*
-.event:hover img.enlarge{
-    display: block;
-
-}
-*/
-
 /* Members Page */
 .grid-item{
     overflow: hidden;
@@ -269,6 +257,8 @@ p{
     border-radius: 50%;
     background-color:  #F7302F;
 }
+
+/* Loading GIF */
 #load{
     width: 880px;
     height:600px;
