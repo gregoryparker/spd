@@ -11,6 +11,8 @@
 @font-face  {  font-family: "Adam";       src: url('../fonts/adamcg.otf')           format("opentype");     }
 
 .roboto {  font-family: 'Roboto', sans-serif;                                                        }
+.adam {  font-family: 'Adam', sans-serif; }
+.amaranth {  font-family: 'Amaranth', sans-serif;}
 
 /* Font Sizes : 10 to 20, 20 to 40 in multiples of 4 */
 
@@ -77,6 +79,7 @@
 .pad8               {  padding: 16px;                               }
 
 .overflowHidden     {  overflow: hidden;                            }
+.overflowXHidden    {  overflow-x: hidden;                            }
 
 /* Position */
 .posAbs             {  position: absolute;                          }
