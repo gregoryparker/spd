@@ -6,16 +6,17 @@
  *
  */
 
-@font-face  {  font-family: "Amaranth";      src: url('../fonts/Amaranth-Regular.ttf') format("truetype");     }
+/* Fonts */
+@font-face  {  font-family: "Amaranth";      src: url('../fonts/Amaranth-Regular.ttf') format("truetype");                  }
 @font-face  {  font-family: "Liberation Sans";      src: url('../fonts/LiberationSans-Regular.ttf') format("truetype");     }
-@font-face  {  font-family: "Adam";       src: url('../fonts/adamcg.otf')           format("opentype");     }
+@font-face  {  font-family: "Adam";       src: url('../fonts/adamcg.otf')           format("opentype");                     }
 
-.roboto {  font-family: 'Roboto', sans-serif;                                                        }
-.adam {  font-family: 'Adam', sans-serif; }
-.amaranth {  font-family: 'Amaranth', sans-serif;}
+.roboto     {  font-family: 'Roboto', sans-serif;                                                                           }
+.adam       {  font-family: 'Adam', sans-serif;                                                                             }
+.amaranth   {  font-family: 'Amaranth', sans-serif;                                                                         }
 
-#footer{
-    bottom: 0; height: 80px; background-color: #191919; width: 100%;margin-top: 80px;
+/* Main Pages */
+#footer{  bottom: 0; height: 80px; background-color: #191919; width: 100%;margin-top: 80px;
 }
 
 /* Font Sizes : 10 to 20, 20 to 40 in multiples of 4 */
@@ -83,13 +84,14 @@
 .pad8               {  padding: 16px;                               }
 
 .overflowHidden     {  overflow: hidden;                            }
-.overflowXHidden    {  overflow-x: hidden;                            }
+.overflowXHidden    {  overflow-x: hidden;                          }
 
 /* Position */
 .posAbs             {  position: absolute;                          }
 .posRel             {  position: relative;                          }
 .posFix             {  position: fixed;                             }
 
+/* Relative Positions */
 .top0               {  top: 0;                                      }
 
 /* Z-Index : Used for overlapping elements. Higher number for element on top */
@@ -98,11 +100,14 @@
 .z1                 {  z-index: 1;                                  }
 .z2                 {  z-index: 2;                                  }
 
-
 /* Colors */
 .colWhite, .colWhite:hover           {  color: white;               }
 .colBlack           {  color: black;                                }
 .colDefault         {  color: black;                                }
+.colDefBlack        {  color: #191919;                              }
+.colLightRed        {  color: #FF5655;                              }
+.colRed             {  color: #F7302F;                              }
+.colDarkRed         {  color: #c52625;                              }
 
 /* Background Color */
 .backColWhite       {  background-color: white;                     }
@@ -111,19 +116,12 @@
 .backColBackGround  {  background-color: #efefef;                   }
 
 /* Links */
-.textDecNone, .textDecNone:active, .textDecNone:visited, .textDecNone:hover {
-    text-decoration: none;
-
+.textDecNone, .textDecNone:active, .textDecNone:visited, .textDecNone:hover {  text-decoration: none;
 }
 
 /* Text Content */
-strong{
-    color: #FF5655;
-}
-p{
-    line-height: 30px;
-}
-
+strong      {  color: #FF5655;  }
+p           {  line-height: 30px;  }
 
 /* Rush Button */
 #rushBtn{
