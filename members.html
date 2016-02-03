@@ -100,7 +100,7 @@
         function drawRow(parent, rowData) {
             if (rowData == null) return null;
             if (rowData.length == 0) return null;
-            var tr = $("<div class='inlineBlock backColWhite bordRad5 shadow grid-item roboto' style=' text-align: left; width: 250px;margin: 20px;'>");
+            var tr = $("<div class='inlineBlock backColWhite bordRad5 grid-item roboto' style=' text-align: left; width: 250px;margin: 20px;'>");
             parent.append(tr);
 
 
@@ -236,8 +236,6 @@
 <div id="header"></div>
 
 <!-- Content -->
-
-
 <div id="membersContainer" class="posRel" style="margin: 35px auto 25px auto; text-align: center; min-height: 530px;">
 
     <div id="load">
@@ -253,16 +251,10 @@
 
 <!-- Footer -->
 <div id="footer"></div>
-
-<!--
-<div>
-Icons made by<a href="http://www.freepik.com" title="Freepik">Freepik</a>
-from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
-is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
-</div>
- -->
 </body>
 </html>
+
+
 <script>
     $(document).ready(function(){
         $('#header').load("header.html");

@@ -104,7 +104,7 @@
 .backColWhite       {  background-color: white;                     }
 .backColLGray       {  background-color: lightgrey;                 }
 .backColBlack       {  background-color: black;                     }
-.backColBackGround  {  background-color: #e3e3e3;                   }
+.backColBackGround  {  background-color: #e6e6e6;                   }
 
 /* Links */
 .textDecNone, .textDecNone:active, .textDecNone:visited, .textDecNone:hover {
@@ -252,7 +252,18 @@ p{
 
 /* Members Page */
 .grid-item{
+    -webkit-box-shadow: 0px 0px 12px -2px #330A0A;
+    -moz-box-shadow: 0px 0px 12px -2px #330A0A;
+    box-shadow: 0px 0px 12px -2px #330A0A;
+}
+
+
+.grid-item:hover{
     overflow: hidden;
+
+    -webkit-box-shadow: 0px 0px 20px -2px #330A0A;
+    -moz-box-shadow: 0px 0px 20px -2px #330A0A;
+    box-shadow: 0px 0px 20px -2px #330A0A;
 }
 
 .cmCont{
