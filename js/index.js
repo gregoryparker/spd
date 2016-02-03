@@ -5,6 +5,8 @@
 
 $(document).ready(function(){
 
+    $('#header').load("header.html");
+    $('#footer').load("footer.html");
 
 
     //$("#slideshow1 > div.imgCont:gt(0)").hide();

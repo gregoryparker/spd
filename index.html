@@ -45,9 +45,9 @@
                 border: 1px solid green;
             }*/
             #ssCont{
-                width: 240%;
+                width: 248%;
                 height: 298px;
-                left: -95%;
+                left: -99.5%;
             }
         }
 
@@ -118,16 +118,16 @@
 
 </head>
 
-<body id="pageone" class="posRel" style="width: 100%; height: 100%; overflow-x: hidden; background-color: #E3E3E3; margin:0; padding:0; ">
+<body id="pageone" class="posRel width100 height100 overflowXHidden marg0 pad0 backColBackGround">
 <!-- Header -->
 <div id="header"></div>
 
 <!-- Content -->
-<div class="posRel" style="width: 100%; margin:15px auto 45px auto; text-align: center; min-height: 453px;overflow:hidden;">
+<div class="posRel width100 centerText overflowHidden width100" style="width: 100%; min-height: 453px;">
 
 
 
-    <div id="ssCont" class="posRel" style="text-align: left; margin: 90px auto 50px;
+    <div id="ssCont" class="posRel" style="text-align: left; margin: 100px auto 50px;
     -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.4);-moz-box-shadow: 0 0 20px rgba(0,0,0,0.4);box-shadow: 0 0 20px rgba(0,0,0,0.4);">
         <div id="slideshowBorder" style=""></div>
 
@@ -176,7 +176,7 @@
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
         <div id="slideshow3" class="slideshow inlineBlock vertAlignTop ">
-            <div style="position: absolute; height: 50px; top: -25px; width: 100%;background-color: #E3E3E3;z-index:10;"></div>
+            <div class="posAbs backColBackGround width100" style="height: 50px; top: -25px; z-index:10;"></div>
             <div class="imgCont"><img src="images/pictures/ss-spd2.jpg" /></div>
             <div class="imgCont"><img src="images/pictures/ss-spd3.jpg" /></div>
             <div class="imgCont"><img src="images/pictures/ss-spd4.jpg" /></div>
@@ -184,7 +184,7 @@
             <div class="imgCont"><img src="images/pictures/ss-spd6.jpg" /></div>
             <div class="imgCont"><img src="images/pictures/ss-spd7.jpg" /></div>
             <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" /></div>
-           <div style="position: absolute; height: 50px; bottom: -25px; width: 100%;background-color: #E3E3E3;z-index:10;"></div>
+            <div class="posAbs backColBackGround width100" style="height: 50px; bottom: -25px; z-index:10;"></div>
         </div>
 
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
@@ -234,75 +234,10 @@
             <div class="imgCont"><img src="images/pictures/ss-spd5.jpg" /></div>
             <div class="blackOverlay" style=""></div>
         </div>
-
-
     </div>
-
 </div>
 
-<!-- Footer Space -->
-<div class="" style="height: 80px;"></div>
 <!-- Footer -->
-<div class="posFix" style="bottom: 0; height: 80px; background-color: #191919; width: 100%;">
-    <div class="shadowTop" style="">
-        <div style="width: 960px; margin: 0 auto;">
-            <div class="posRel centerDiv" style="width: 90%; height: 80px;">
-                <div class="posRel inlineBlock width100 centerText" style="font-family: Adam; line-height: 80px; color: #F7302F; font-size: 18px;">
-
-                    <div class="inlineBlock posAbs" style="left: -10px;">
-
-                        <!-- Link to Sigma Phi Delta Home Page -->
-                        <a href="http://www.sigmaphidelta.org"><div class="icon z2 inlineBlock flaticon-castle colWhite"></div></a>
-
-                        <!-- Link to SBU CEAS -->
-                        <a href="http://www.stonybrook.edu/commcms/ceas/">
-                            <div class="z2 inlineBlock posRel" style="height: 22px; width: 22px; vertical-align: middle; overflow: hidden; bottom: 2px;margin: 0 20px;">
-                                <img src="images/symbols/sbu1.png" height="22px" style="vertical-align: top; color: red;"/>
-                            </div>
-                        </a>
-                    </div>
-
-                    <span style="margin: 0 20px;">&middot;</span>
-                    THE PREMIER INTERNATIONAL
-                    <span class="posRel" style="font-size: 38px; vertical-align: middle; top: 2px; padding: 0 5px;">&Sigma;&Phi;&Delta;</span>
-                    FRATERNITY OF ENGINEERS
-                    <span style="margin: 0 20px;">&middot;</span>
-
-                    <div class="inlineBlock posAbs" style="right: 10px;">
-
-                        <!-- Link to Facebook -->
-                        <a href="https://www.facebook.com/spdbetaeta/?fref=ts"><div class="icon z2 inlineBlock flaticon-facebook55 colWhite"></div></a>
-
-                        <!-- Link to Instagram -->
-                        <a href="https://www.instagram.com/spdbh/"><div class="icon z2 inlineBlock flaticon-instagram16 colWhite"></div></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--
-<div>
-Icons made by<a href="http://www.freepik.com" title="Freepik">Freepik</a>
-from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
-is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
-</div>
- -->
+<div id="footer" class="posFix"></div>
 </body>
 </html>
-<script>
-    $(document).ready(function(){
-        $('#header').load("header.html");
-        $('#footer').load("footer.html");
-    });
-</script>
-
-<script>
-    $(document).on('page:load', function() {
-        $('#header').load("header.html");
-        $('#footer').load("footer.html");
-    });
-</script>
-
