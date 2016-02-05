@@ -269,9 +269,9 @@ p           {  line-height: 30px;  }
 .grid-item:hover{
     overflow: hidden;
 
-    -webkit-box-shadow: 0 0 20px -2px #464646;
-    -moz-box-shadow: 0 0 20px -2px #464646;
-    box-shadow: 0 0 20px -2px #464646;
+    -webkit-box-shadow: 0 0 20px -2px #262626;
+    -moz-box-shadow: 0 0 20px -2px #262626;
+    box-shadow: 0 0 20px -2px #262626;
 }
 
 .cmCont{

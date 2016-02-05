@@ -12,7 +12,7 @@
 
         <!-- Subtitle -->
         <div class="posRel adam centerText colRed fontSize26">
-            Beta - Eta Chapter
+            <span id="bananaPartyBtn">B</span>eta - Eta Chapter
             &middot;
             SUNY
             &middot;
@@ -30,6 +30,8 @@
             <a href="contact.html" id="nvb-contact" class="navbaritem textDecNone colWhite" data-transition="flow">CONTACT</a>
         </div>
     </div>
+
+    <audio id="bananaParty" loop="loop" src="audio/bananaparty.mp3" class="posAbs" style="opacity: 0;"></audio>
 </div>
 <script>
     $(document).ready(function(){
@@ -78,6 +80,11 @@
                     fontSize: "16px"
                 }, 200 );
             }
+        });
+
+        // Banana Party Button
+        $('#bananaPartyBtn').click(function(){
+            $('#bananaParty').trigger('play');
         });
     });
 </script>
