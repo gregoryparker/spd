@@ -53,11 +53,11 @@
 <div id="header"></div>
 
 <!-- Welcome Letter-->
-<div class="posRel inlineBlock roboto centerDiv vertAlignTop centerText bordRad5 shadow colWhite" style="background-color: #464646; top: 50px; font-size: 20px;margin-bottom: 50px; width: 550px;height: 300px;z-index: 11;">
+<div class="posRel inlineBlock roboto centerDiv vertAlignTop centerText bordRad5 shadow colWhite fontSize20" style="background-color: #464646; top: 50px;margin-bottom: 120px; width: 550px;height: 300px;z-index: 11;">
     <img src='images/symbols/spdpic.jpg' class="height100 width100" style="opacity: 0.3;"/>
 
     <div class="posAbs height100 top0" style="width:90%;margin: 0 5%;">
-        <div class="" style="font-family: Amaranth; font-size: 36px; margin: 25px 0 25px 0;">Welcome to Sigma Phi Delta!</div>
+        <div class="amaranth fontSize36" style="margin: 25px 0 25px 0;">Welcome to Sigma Phi Delta!</div>
         <p>We are a <strong>professional</strong> and <strong>social</strong> engineering fraternity made up of the most excellent male engineers at
             Stony Brook University. Our fraternity is dedicated to guiding its members towards professional and <strong>academic
                 success</strong> while enriching the college experience for engineering students.</p>
@@ -65,9 +65,7 @@
 </div>
 
 <!-- Content -->
-<div class="posRel shadow" style="bottom: 0;width: 530px; margin:25px auto 0 auto; text-align: center; height: 400px;overflow:hidden;border: 10px solid #464646;">
-
-
+<div class="posRel shadow overflowHidden" style="bottom: 0;width: 530px; margin:25px auto 0 auto; text-align: center; height: 400px;border: 10px solid #464646;">
         <!-- Slideshow - Preferred Aspect Ratio is 4:3 for images -->
         <div id="slideshow" class="slideshow inlineBlock vertAlignTop" style="">
             <div class="imgCont"><img src="images/pictures/ss-spd1.jpg" height="400px" width="530px"/></div>
@@ -81,44 +79,21 @@
 </div>
 
 <!-- Interested in Rushing?-->
-<div class="posRel inlineBlock roboto centerDiv vertAlignTop centerText bordRad5 shadow colWhite" style="background-color: #464646; top: 50px; font-size: 20px;margin-bottom: 50px; width: 550px;height: 300px;z-index: 11;">
+<div class="posRel inlineBlock roboto centerDiv vertAlignTop centerText bordRad5 shadow colWhite fontSize20" style="background-color: #464646; top: 50px; margin-bottom: 50px; width: 550px;height: 300px;z-index: 11;">
     <img src='https://pbs.twimg.com/profile_images/2620742352/banner1.jpg' class="height100 width100" style="opacity: 0.6;"/>
 
     <div class="posAbs height100 top0" style="width:90%;margin: 0 5%;">
-        <div class="" style="font-family: Amaranth; font-size: 36px; margin: 25px 0 25px 0;">Interested in joining?</div>
+        <div class="fontSize36 amaranth" style="margin: 25px 0 25px 0;">Interested in joining?</div>
         <p>The academic, professional, and networking opportunities are boundless as a member of Sigma Phi Delta.
             Learn in detail about these opportunities and how to join Sigma Phi Delta at our RUSH page.</p>
-        <a href="rush.html" style="text-decoration: none;">
-            <div id="rushBtn" class="vertAlignTop centerText" style="height: 7%;font-size: 28px;">SPRING RUSH 2016</div>
+        <a href="rush.html" class="textDecNone">
+            <div id="rushBtn" class="vertAlignTop centerText fontSize28" style="height: 7%;">SPRING RUSH 2016</div>
         </a>
     </div>
 </div>
 
-<div style="height: 80px"></div>
 <!-- Footer -->
-<div id="footer"></div>
+<div id="footer" class="posAbs"></div>
 
-
-<!--
-<div>
-Icons made by<a href="http://www.freepik.com" title="Freepik">Freepik</a>
-from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
-is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
-</div>
- -->
 </body>
 </html>
-<script>
-    $(document).ready(function(){
-        $('#header').load("header.html");
-        $('#footer').load("footer.html");
-    });
-</script>
-
-<script>
-    $(document).on('page:load', function() {
-        $('#header').load("header.html");
-        $('#footer').load("footer.html");
-    });
-</script>
-
