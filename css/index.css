@@ -260,18 +260,18 @@ p           {  line-height: 30px;  }
 
 /* Members Page */
 .grid-item{
-    -webkit-box-shadow: 0 0 12px -2px #330A0A;
-    -moz-box-shadow: 0 0 12px -2px #330A0A;
-    box-shadow: 0 0 12px -2px #330A0A;
+    -webkit-box-shadow: 0 0 12px -2px #464646;
+    -moz-box-shadow: 0 0 12px -2px #464646;
+    box-shadow: 0 0 12px -2px #464646;
 }
 
 
 .grid-item:hover{
     overflow: hidden;
 
-    -webkit-box-shadow: 0 0 20px -2px #330A0A;
-    -moz-box-shadow: 0 0 20px -2px #330A0A;
-    box-shadow: 0 0 20px -2px #330A0A;
+    -webkit-box-shadow: 0 0 20px -2px #464646;
+    -moz-box-shadow: 0 0 20px -2px #464646;
+    box-shadow: 0 0 20px -2px #464646;
 }
 
 .cmCont{
