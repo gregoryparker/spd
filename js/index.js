@@ -8,13 +8,6 @@ $(document).ready(function(){
     $('#header').load("header.html");
     $('#footer').load("footer.html");
 
-
-    // Masonry Grid
-    $('#masonryGrid').masonry({
-        columnWidth: 1,
-        itemSelector: '.grid-item'
-    });
-
     //$("#slideshow1 > div.imgCont:gt(0)").hide();
     setInterval(function() {
         $('#slideshow1 > div.imgCont:first')

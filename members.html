@@ -270,6 +270,17 @@
         @media all and (min-width:1500px) {  #membersContainer{  width: 1460px;  } #load{left: 19%;}  }
         @media all and (min-width:1800px) {  #membersContainer{  width: 1750px;  } #load{left: 25%;}  }x
     </style>
+
+    <!-- Masonry -->
+    <script>
+        $(document).ready(function(){
+            // Masonry Grid
+            $('#masonryGrid').masonry({
+                columnWidth: 1,
+                itemSelector: '.grid-item'
+            });
+        })
+    </script>
 </head>
 
 <body id="pageone" class="posRel width100 height100 overflowXHidden backColBackground pad0 marg0">
@@ -277,7 +288,7 @@
 <div id="header"></div>
 
 <!-- Content -->
-<div id="membersContainer" class="posRel centerText" style="margin: 35px auto 25px auto; min-height: 530px;">
+<div id="membersContainer" class="posRel centerText" style="margin: 40px auto 25px auto; min-height: 530px;">
 
     <div id="load">
         <img src="images/symbols/loading.gif" height="200px" width="200px"/>
