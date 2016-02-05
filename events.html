@@ -32,6 +32,16 @@
     <!-- Masonry -->
     <script src="js/masonry.pkgd.min.js"></script>
 
+    <!-- Masonry -->
+    <script>
+        $(window).on('load', function(){
+            $('#grid').masonry({
+                columnWidth: 1,
+                itemSelector: '.grid-item'
+            });
+        });
+    </script>
+
     <!-- Events Page Specific Styling -->
     <style>
         .event {
@@ -64,17 +74,6 @@
             opacity: 1;
         }
     </style>
-
-    <!-- Masonry -->
-    <script>
-        $(document).ready(function(){
-            // Masonry Grid
-            $('#masonryGrid').masonry({
-                columnWidth: 1,
-                itemSelector: '.grid-item'
-            });
-        })
-    </script>
 </head>
 
 <body class="posRel width100 height100 overflowXHidden backColBackGround marg0 pad0">
@@ -82,10 +81,10 @@
 <div id="header"></div>
 
 <!-- Content -->
-<div class="posRel roboto height100 fontSize20" style="min-width: 900px; margin: 40px auto 25px auto; min-height: 700px;max-width: 70%;">
+<div class="posRel roboto height100 fontSize20" style="min-width: 900px; margin: 30px auto 25px auto; min-height: 700px;max-width: 70%;">
 
     <!-- Upcoming Event Boxes -->
-    <div id="masonryGrid"   class="posRel" style="min-height: 900px;">
+    <div id="grid"   class="posRel" style="min-height: 900px;">
 
         <!-- Event -->
         <div class="grid-item event shadow">
@@ -116,5 +115,6 @@
 
 <!-- Footer -->
 <div id="footer" class="posAbs"></div>
+
 </body>
 </html>
