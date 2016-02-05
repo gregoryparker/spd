@@ -25,9 +25,9 @@
 .fontSize36{  font-size: 2.25em;    }
 .fontSize32{  font-size: 2em;       }
 .fontSize28{  font-size: 1.75em;    }
-.fontSize26{  font-size: 1.625em;     }
+.fontSize26{  font-size: 1.625em;   }
 .fontSize24{  font-size: 1.5em;     }
-
+.fontSize22{  font-size: 1.375em;   }
 .fontSize20{  font-size: 1.25em;    }
 .fontSize19{  font-size: 1.1875em;  }
 .fontSize18{  font-size: 1.125em;   }
@@ -41,13 +41,14 @@
 .fontSize10{  font-size: 0.625em;   }
 
 /* Line Height */
-.lineHeight24{  line-height:1.5em;}
+.lineHeight24{  line-height:1.3em;}
 
 /* Alignment */
 .centerText         {  text-align: center; align-items: center;                         }
 .leftText           {  text-align: left;                          }
 .centerDiv          {  margin-left: auto; margin-right: auto;       }
 .centerVert         {  display:flex;text-align: left;align-items:center;}
+.centerVertHorz     {  display:flex;text-align: center;align-items: center;}
 
 .floatLeft          {  float: left;                                 }
 .floatRight         {  float: right;                                }
