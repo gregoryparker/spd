@@ -32,11 +32,9 @@
     <!-- Masonry -->
     <script src="js/masonry.pkgd.min.js"></script>
 
-    <!-- Javascript for Members Page -->
     <script type="text/javascript">
 
         // Parses a google spreadsheet and dynamically creates HTML elements with information from the spreadsheet
-        //      Modified
         var spData = null;
         function doData(json) {
             spData = json.feed.entry;
@@ -103,9 +101,7 @@
                         }
                     container.append(input);
                     break;
-
             }
-
         }
         function drawRow(parent, rowData) {
             if (rowData == null) return null;
@@ -113,12 +109,10 @@
             var tr = $("<div class='inlineBlock backColWhite bordRad5 grid-item roboto' style=' text-align: left; width: 250px;margin: 20px;'>");
             parent.append(tr);
 
-
             /*for(var c=0; c<rowData.length; c++) {
                 drawCell(tr, rowData[c], c);
             }
              */
-
 
             if (rowData[4]!= 'FALSE'){
                 var divHeader = $(
@@ -139,8 +133,8 @@
 
             if (rowData[9] != 'FALSE'){
                 var divPicture = $(
-                        '<div class="" style="padding: 0;"> ' +
-                        '<div style="max-height: 300px; overflow: hidden;"><img src="' + rowData[9] +  '" width="100%" /></div>' +
+                        '<div class="pad0"> ' +
+                        '<div class="overflowHidden" style="max-height: 300px;"><img src="' + rowData[9] +  '" width="100%" /></div>' +
                         '</div>');
                 tr.append(divPicture);
             }
@@ -166,36 +160,16 @@
             parent.append(end);
         }
         function getMajorLong(major){
-            if (major=='ESG'){
-                return 'Engineering Science';
-            }
-            else if(major=='CIV'){
-                return 'Civil Engineering';
-            }
-            else if(major=='CE'){
-                return 'Computer Engineering';
-            }
-            else if(major=='CSE' || major=='CS'){
-                return 'Computer Science';
-            }
-            else if(major=='ISE' || major=='IS'){
-                return 'Information Systems';
-            }
-            else if(major=='MEC' || major=='ME'){
-                return 'Mechanical Engineering';
-            }
-            else if(major=='AMS' ){
-                return '<div class="fontSize14">Applied Math and Statistics</div>';
-            }
-            else if(major=='ES' ){
-                return 'Environmental Science';
-            }
-            else if(major=='TSM' ){
-                return 'Technical Systems Management';
-            }
-            else{
-                return '';
-            }
+            if      (major=='ESG')                      {  return 'Engineering Science';                                        }
+            else if (major=='CIV')                      {  return 'Civil Engineering';                                          }
+            else if (major=='CE')                       {  return 'Computer Engineering';                                       }
+            else if (major=='CSE' || major=='CS')       {  return 'Computer Science';                                           }
+            else if (major=='ISE' || major=='IS')       {  return 'Information Systems';                                        }
+            else if (major=='MEC' || major=='ME')       {  return 'Mechanical Engineering';                                     }
+            else if (major=='AMS' )                     {  return '<div class="fontSize14">Applied Math and Statistics</div>';  }
+            else if (major=='ES' )                      {  return 'Environmental Science';                                      }
+            else if (major=='TSM' )                     {  return 'Technical Systems Management';                               }
+            else                                        {  return '';                                                           }
         }
 
         //function drawTable(parent) {
@@ -241,7 +215,19 @@
     </script>
     <script src="https://spreadsheets.google.com/feeds/cells/1ZzVZpDJh6x55HRXbUJpfrdHFPyQDzU05eIN1RJe43ds/1/public/values?alt=json-in-script&callback=doData"></script>
 
-    <!-- Javascript for highlight events for members -->
+    <!-- Masonry Plugin -->
+    <script>
+        $(window).on('load', function(){
+
+            $('#data').masonry({
+                columnWidth: 1,
+                itemSelector: '.grid-item'
+
+            });
+        });
+    </script>
+
+    <!-- Javascript for member hover effects -->
     <script>
         /*
          $(window).bind("load", function() {
@@ -261,7 +247,7 @@
          */
     </script>
 
-    <!-- Styling to resize the page for different columns of members shown -->
+    <!-- CSS for resizing the number of columns for the page width -->
     <style>
         @media all and (min-width:300px) {  #membersContainer{  width: 300px;  }   #load{left:-5%;} }
         @media all and (min-width:600px) {  #membersContainer{  width: 590px;  }   #load{left: -3%;}  }
@@ -271,24 +257,14 @@
         @media all and (min-width:1800px) {  #membersContainer{  width: 1750px;  } #load{left: 25%;}  }x
     </style>
 
-    <!-- Masonry -->
-    <script>
-        $(document).ready(function(){
-            // Masonry Grid
-            $('#masonryGrid').masonry({
-                columnWidth: 1,
-                itemSelector: '.grid-item'
-            });
-        })
-    </script>
 </head>
 
-<body id="pageone" class="posRel width100 height100 overflowXHidden backColBackground pad0 marg0">
+<body id="pageone" class="posRel width100 height100 overflowXHidden backColBackGround marg0 pad0">
 <!-- Header -->
 <div id="header"></div>
 
 <!-- Content -->
-<div id="membersContainer" class="posRel centerText" style="margin: 40px auto 25px auto; min-height: 530px;">
+<div id="membersContainer" class="posRel centerText" style="margin: 35px auto 25px auto; min-height: 530px;">
 
     <div id="load">
         <img src="images/symbols/loading.gif" height="200px" width="200px"/>
@@ -296,15 +272,12 @@
 
     <div id="contents">
         <!-- I don't know why this needs a padding left -> Added bordRed, evens out the DIV -->
-        <div id="masonryGrid" class="centerText centerDiv" style="padding: 0 0 0 3px;"></div>
+        <div id="data" class="centerText centerDiv" style="padding: 0 0 0 3px;"></div>
     </div>
 
 </div>
 
 <!-- Footer -->
-<div id="footer" class="posAbs"></div>
+<div id="footer"></div>
 </body>
 </html>
-
-
-
