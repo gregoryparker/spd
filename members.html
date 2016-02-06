@@ -132,11 +132,20 @@
 
 
             if (rowData[9] != 'FALSE'){
-                var divPicture = $(
-                        '<div class="pad0"> ' +
-                        '<div class="overflowHidden" style="max-height: 300px;"><img src="' + rowData[9] +  '" width="100%" /></div>' +
-                        '</div>');
-                tr.append(divPicture);
+                if(rowData[10] == 'TRUE'){
+                    var divPicture = $(
+                            '<div class="pad0"> ' +
+                            '<div class="overflowHidden" style="max-height: 350px;"><img src="' + rowData[9] +  '" width="100%" /></div>' +
+                            '</div>');
+                    tr.append(divPicture);
+                }else{
+                    var divPicture = $(
+                            '<div class="pad0"> ' +
+                            '<div class="overflowHidden" style="max-height: 300px;"><img src="' + rowData[9] +  '" width="100%" /></div>' +
+                            '</div>');
+                    tr.append(divPicture);
+                }
+
             }
 
             var divContent = $(
@@ -200,25 +209,24 @@
             $('.categ').click(function(){
                 var val = $(this).find('.selCat').html();
                 var cat = this.id;
-                alert(cat);
 
                 var catVal=0;
                 if      (cat == 'class')        {  catVal = 0;  }
                 else if (cat == 'major')        {  catVal = 1;  }
                 else if (cat == 'membership')   {  catVal = 2;  }
+                else                            {  catVal = -1; }
 
-
-                var elements = document.getElementsByClassName('grid-item');
-                for(var i=0;i<elements.length;i++){
-                    if (elements[i].getElementsByClassName('selCat')[catVal].innerHTML != val){
-                        elements[i].style.opacity = '0.5';
-                    }
-                    else{
-                        elements[i].style.opacity = '1';
+                if (catVal >= 0){
+                    var elements = document.getElementsByClassName('grid-item');
+                    for(var i=0;i<elements.length;i++){
+                        if (elements[i].getElementsByClassName('selCat')[catVal].innerHTML != val){
+                            elements[i].style.opacity = '0.5';
+                        }
+                        else{
+                            elements[i].style.opacity = '1';
+                        }
                     }
                 }
-
-
             });
         });
 
