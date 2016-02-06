@@ -74,6 +74,31 @@
             opacity: 1;
         }
     </style>
+
+    <!-- Script to load in all grid-items -->
+    <script>
+        $(document).ready(function(){
+            var eventList = [
+                "spring2016/rushflier.jpg",
+                "fall2015/clothingdrive.jpg",
+                "fall2015/sexharassment.jpg",
+                "fall2015/bubbletea.jpg",
+                "fall2015/resumereview.jpg"
+            ];
+
+            for(var i = 0; i < eventList.length; i++){
+                var gridItemString = '<div class="grid-item event shadow"><a href="images/fliers/';
+                gridItemString += eventList[i];
+                gridItemString += '"><img class="small" src="images/fliers/';
+                gridItemString += eventList[i];
+                gridItemString += '"width="100%"></a><img class="enlarge" src="images/fliers/';
+                gridItemString += eventList[i];
+                gridItemString += '" width="200%">';
+
+                $('#grid').append($(gridItemString));
+            }
+        });
+    </script>
 </head>
 
 <body class="posRel width100 height100 overflowXHidden backColBackGround marg0 pad0">
@@ -81,37 +106,7 @@
 <div id="header"></div>
 
 <!-- Content -->
-<div class="posRel roboto height100 fontSize20" style="min-width: 900px; margin: 30px auto 25px auto; min-height: 700px;max-width: 70%;">
-
-    <!-- Upcoming Event Boxes -->
-    <div id="grid"   class="posRel" style="min-height: 900px;">
-
-        <!-- Event -->
-        <div class="grid-item event shadow">
-            <a href="images/fliers/fall2015/clothingdrive.jpg"><img class="small" src="images/fliers/fall2015/clothingdrive.jpg" width="100%"  style=""></a>
-            <img class="enlarge" src="images/fliers/fall2015/clothingdrive.jpg" width="200%" style="">
-        </div>
-
-        <!-- Event -->
-        <div class="grid-item event shadow">
-            <a href="images/fliers/fall2015/sexharassment.jpg"><img class="small" src="images/fliers/fall2015/sexharassment.jpg" width="100%" style=""></a>
-            <img class="enlarge" src="images/fliers/fall2015/sexharassment.jpg" width="200%" style="">
-        </div>
-
-        <!-- Event -->
-        <div class="grid-item event shadow">
-            <a href="images/fliers/fall2015/bubbletea.jpg"><img class="small" src="images/fliers/fall2015/bubbletea.jpg" width="100%" style=""></a>
-            <img class="enlarge" src="images/fliers/fall2015/bubbletea.jpg" width="200%" style="">
-        </div>
-
-        <!-- Event -->
-        <div class="grid-item event shadow">
-            <a href="images/fliers/fall2015/resumereview.jpg"><img class="small" src="images/fliers/fall2015/resumereview.jpg" width="100%" style=""></a>
-            <img class="enlarge" src="images/fliers/fall2015/resumereview.jpg" width="200%" style="">
-        </div>
-
-    </div>
-</div>
+<div id="grid" class="posRel roboto height100 fontSize20" style="min-width: 900px; margin: 30px auto 25px auto; min-height: 700px;max-width: 70%;"></div>
 
 <!-- Footer -->
 <div id="footer" class="posAbs"></div>
