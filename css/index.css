@@ -288,6 +288,15 @@ p           {  line-height: 30px;  }
     z-index:9999;
 }
 
+/* Category for members page hover */
+.categ{
+    background-color: white;
+    padding: 1px 8px 1px 8px;
+    cursor: pointer;
+}
+.categ:hover{
+    background-color: #eeeeee;
+}
 /* Footer Icon */
 .icon:hover{
     color: #F7302F;

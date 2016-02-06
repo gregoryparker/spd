@@ -140,12 +140,12 @@
             }
 
             var divContent = $(
-                    '<div class="" style="padding: 5px 8px 5px 8px;line-height: 35px;"> ' +
+                    '<div class="" style="padding: 5px 0 5px 0;line-height: 35px;"> ' +
                         '<div class="" style="">' +
-                            '<div id="class" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize18" style="line-height: 37px; margin: 3px auto;">&' + rowData[2] + ';</div>' + '<div class="inlineBlock" style="padding-left: 10px;">' + rowData[2] + '</div></div></div>' +
-                            '<div id="major" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize13" style="line-height: 37px; margin: 3px auto;">' + rowData[1] + '</div>' + '<div class="inlineBlock" style="padding-left: 10px;line-height: 20px;">' + getMajorLong(rowData[1]) + '</div></div></div>' +
-                            '<div id="membership" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;">' + rowData[5] + '</div>' + '<div class="inlineBlock" style="padding-left: 10px;">' + rowData[7] + '</div></div></div>' +
-                            '<div id="hometown" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;"><div class="flaticon-house34 posRel" style="right: 13px;"></div></div>' + '<div class="inlineBlock" style="padding-left: 10px;">' + rowData[3] + '</div></div></div>' +
+                            '<div id="class" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize18 selCat" style="line-height: 37px; margin: 3px auto;">&' + rowData[2] + ';</div>' + '<div id="classCat" class="inlineBlock" style="padding-left: 10px;">' + rowData[2] + '</div></div></div>' +
+                            '<div id="major" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize13 selCat" style="line-height: 37px; margin: 3px auto;">' + rowData[1] + '</div>' + '<div id="majorCat" class="inlineBlock" style="padding-left: 10px;">' + getMajorLong(rowData[1]) + '</div></div></div>' +
+                            '<div id="membership" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;">' + rowData[5] + '</div>' + '<div id="memberCat" class="inlineBlock selCat" style="padding-left: 10px;">' + rowData[7] + '</div></div></div>' +
+                            '<div id="hometown" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;"><div class="flaticon-house34 posRel" style="right: 13px;"></div></div>' + '<div class="inlineBlock posRel" style="padding-left: 10px;bottom: 3px;">' + rowData[3] + '</div></div></div>' +
                         '</div>' +
                     '</div>');
             tr.append(divContent);
@@ -197,6 +197,29 @@
         $(document).ready(function(){
             readData($("#data"));
 
+            $('.categ').click(function(){
+                var val = $(this).find('.selCat').html();
+                var cat = this.id;
+                alert(cat);
+
+                var catVal=0;
+                if      (cat == 'class')        {  catVal = 0;  }
+                else if (cat == 'major')        {  catVal = 1;  }
+                else if (cat == 'membership')   {  catVal = 2;  }
+
+
+                var elements = document.getElementsByClassName('grid-item');
+                for(var i=0;i<elements.length;i++){
+                    if (elements[i].getElementsByClassName('selCat')[catVal].innerHTML != val){
+                        elements[i].style.opacity = '0.5';
+                    }
+                    else{
+                        elements[i].style.opacity = '1';
+                    }
+                }
+
+
+            });
         });
 
         // For the loading gif
@@ -211,40 +234,20 @@
                     document.getElementById('contents').style.visibility="visible";
                 },1000);
             }
-        }
+        };
+
     </script>
     <script src="https://spreadsheets.google.com/feeds/cells/1ZzVZpDJh6x55HRXbUJpfrdHFPyQDzU05eIN1RJe43ds/1/public/values?alt=json-in-script&callback=doData"></script>
 
     <!-- Masonry Plugin -->
     <script>
         $(window).on('load', function(){
-
             $('#data').masonry({
                 columnWidth: 1,
                 itemSelector: '.grid-item'
 
             });
         });
-    </script>
-
-    <!-- Javascript for member hover effects -->
-    <script>
-        /*
-         $(window).bind("load", function() {
-         $('.categ').mouseenter(function(){
-         /*alert($(this).find('.cmCont').text());
-         var val = $(this).find('.cmCont').text();
-         var elements = document.getElementsByClassName('.cmCont');
-         alert(elements.length);
-         for(var i=0;i<elements.length;i++){
-         if(elements[i].text() != val){
-         alert('heel');
-         elements[i].parent('.grid-item').css('display','none');
-         }
-         }
-         });
-         });
-         */
     </script>
 
     <!-- CSS for resizing the number of columns for the page width -->
