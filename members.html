@@ -221,6 +221,8 @@
                     for(var i=0;i<elements.length;i++){
                         if (elements[i].getElementsByClassName('selCat')[catVal].innerHTML != val){
                             elements[i].style.opacity = '0.5';
+                            var tr = $("<div class='inlineBlock backColWhite bordRad5 grid-item roboto' style=' text-align: left; width: 250px;margin: 20px;'>" + elements[i].innerHTML + "</div>");
+                            $('#data').masonry( 'prepended', tr );
                         }
                         else{
                             elements[i].style.opacity = '1';
