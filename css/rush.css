@@ -15,7 +15,12 @@ strong{
     box-shadow: 0 5px 10px 0 #464646;
 }
 .redBorder{
-    border: 2px solid #F7302F;border-radius: 5px;
+    border-top: 2px solid #F7302F;
+    border-bottom: 2px solid #F7302F;
+    border-radius: 5px;
+
+}
+.parMargPad{
     margin: 20px;
     padding: 15px;
 }
