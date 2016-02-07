@@ -27,3 +27,8 @@
 .event:hover::after {
     opacity: 1;
 }
+
+
+@media all and (min-width:300px)    {  #grid{  width: 820px;   }  }
+@media all and (min-width:1600px)   {  #grid{  width: 1220px;  }  }
+@media all and (min-width:1850px)   {  #grid{  width: 1630px;  }  }
