@@ -110,7 +110,7 @@
         function drawRow(parent, rowData) {
             if (rowData == null) return null;
             if (rowData.length == 0) return null;
-            var tr = $("<div class='inlineBlock backColWhite bordRad5 grid-item roboto' style=' text-align: left; width: 250px;margin: 20px;'>");
+            var tr = $("<div class='inlineBlock backColWhite bordRad5 grid-item roboto' data-top='false' style=' text-align: left; width: 250px;margin: 20px;'>");
             parent.append(tr);
 
             /*for(var c=0; c<rowData.length; c++) {
@@ -155,9 +155,9 @@
             var divContent = $(
                     '<div class="" style="padding: 5px 0 5px 0;line-height: 35px;"> ' +
                         '<div class="" style="">' +
-                            '<div id="class" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize18 selCat" style="line-height: 37px; margin: 3px auto;">&' + rowData[2] + ';</div>' + '<div id="classCat" class="inlineBlock" style="padding-left: 10px;">' + rowData[2] + '</div></div></div>' +
-                            '<div id="major" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize13 selCat" style="line-height: 37px; margin: 3px auto;">' + rowData[1] + '</div>' + '<div id="majorCat" class="inlineBlock" style="padding-left: 10px;">' + getMajorLong(rowData[1]) + '</div></div></div>' +
-                            '<div id="membership" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;">' + rowData[5] + '</div>' + '<div id="memberCat" class="inlineBlock selCat" style="padding-left: 10px;">' + rowData[7] + '</div></div></div>' +
+                            '<div id="class" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize18 selCat" style="line-height: 37px; margin: 3px auto;">&' + rowData[2] + ';</div>' + '<div class="classCat inlineBlock" style="padding-left: 10px;">' + rowData[2] + '</div></div></div>' +
+                            '<div id="major" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize13 selCat" style="line-height: 37px; margin: 3px auto;">' + rowData[1] + '</div>' + '<div class="majorCat inlineBlock" style="padding-left: 10px;">' + getMajorLong(rowData[1]) + '</div></div></div>' +
+                            '<div id="membership" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;">' + rowData[5] + '</div>' + '<div class="memberCat inlineBlock selCat" style="padding-left: 10px;">' + rowData[7] + '</div></div></div>' +
                             '<div id="hometown" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;"><div class="flaticon-house34 posRel" style="right: 13px;"></div></div>' + '<div class="inlineBlock posRel" style="padding-left: 10px;bottom: 3px;">' + rowData[3] + '</div></div></div>' +
                         '</div>' +
                     '</div>');
@@ -225,15 +225,14 @@
                     for(var i=0;i<elements.length;i++){
                         if (elements[i].getElementsByClassName('selCat')[catVal].innerHTML != val){
                             elements[i].style.opacity = '0.5';
-
+                            elements[i].setAttribute('data-top', 'true');
                         }
                         else{
                             elements[i].style.opacity = '1';
-                            var tr = $("<div class='inlineBlock backColWhite bordRad5 grid-item roboto' style=' text-align: left; width: 250px;margin: 20px;'>" + elements[i].innerHTML + "</div>");
-                            var vr = elements[i];
-                            $('#data').masonry( 'prepended', vr );
+                            elements[i].setAttribute('data-top', 'false');
                         }
                     }
+                    $('#data').isotope('updateSortData').isotope();
                 }
             });
         });
@@ -258,10 +257,33 @@
     <!-- Masonry Plugin -->
     <script>
         $(window).on('load', function(){
-            $('#data').masonry({
-                columnWidth: 1,
-                itemSelector: '.grid-item'
 
+            function parseClass(classCat){
+                if      (classCat == 'Alpha')       {  return 0;    }
+                else if (classCat == 'Beta')        {  return 1;    }
+                else if (classCat == 'Gamma')       {  return 2;    }
+                else if (classCat == 'Delta')       {  return 3;    }
+                else if (classCat == 'Epsilon')     {  return 4;    }
+                else if (classCat == 'Zeta')        {  return 5;    }
+                else if (classCat == 'Eta')         {  return 6;    }
+                else if (classCat == 'Theta')       {  return 7;    }
+                else if (classCat == 'Iota')        {  return 8;    }
+                else if (classCat == 'Kappa')       {  return 9;    }
+                else if (classCat == 'Lambda')      {  return 10;   }
+            }
+
+            var $grid = $('#data').isotope({
+                itemSelector: '.grid-item',
+                getSortData: {
+                    top: '[data-top]',
+                    major: '.majorCat',
+                    membership: '.memberCat',
+                    classCat: function( itemElem ) {
+                        var weight = $( itemElem ).find('.classCat').text();
+                        return parseClass(weight);
+                    }
+                },
+                sortBy: 'top'
             });
         });
     </script>
