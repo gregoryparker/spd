@@ -3,16 +3,19 @@ strong{
     font-weight:normal;
 }
 @media only screen and (max-width: 899px) {
-    /*#rushflier {
+    #rushflier {
         float: none;
         display: block;
-        width: 80%;
-        height: 90%;
-        border: 1px solid red;
-    }*/
+        margin: 0 auto;
+    }
 }
 .circShadow{
     -webkit-box-shadow: 0 5px 10px 0 #464646;
     -moz-box-shadow: 0 5px 10px 0 #464646;
     box-shadow: 0 5px 10px 0 #464646;
+}
+.redBorder{
+    border: 2px solid #F7302F;border-radius: 5px;
+    margin: 20px;
+    padding: 15px;
 }
