@@ -1,0 +1,31 @@
+/* Rush Button Mobile */
+#mobRushBtn{
+    display: inline-block;
+    border-bottom: 4px solid #DE2B2A;
+    cursor: pointer;
+    background-color: #F7302F;
+    color: white;
+    border-radius: 20px;
+    padding: 15px 15px 25px 15px;
+    font-size: 2vw;
+    margin: 25px auto;
+    font-family: Adam, sans-serif;
+    position: relative;
+}
+#mobRushBtn:hover{
+    border: none;
+    top: 4px;
+}
+#mobRushBtn:active{
+    -webkit-box-shadow: inset 0 4px 5px #9E1F1E;
+    -moz-box-shadow: inset 0 4px 5px #9E1F1E;
+    box-shadow: inset 0 4px 5px  #9E1F1E;
+}
+.imgCont{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+p           {  line-height: 30px;  }

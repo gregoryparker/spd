@@ -12,10 +12,10 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     <!-- Load in the javascript file -->
-    <script language="javascript" type="text/javascript" src="js/index.js"></script>
+    <script language="javascript" type="text/javascript" src="js/main.js"></script>
 
     <!-- Load in the CSS file -->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -29,108 +29,11 @@
     <!-- Color Animations -->
     <script src="js/jquery.color.js"></script>
 
-    <!-- Checks if the screen is mobile/tablet and redirects user to another mobile friendly view -->
-    <script type="text/javascript">
-        if (screen.width <= 899) {
-            document.location = "mobile.html";
-        }
-    </script>
-    <!-- If the screen is an iphone, redirect to mobile friendly view -->
-    <script language=javascript>
-        if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-            location.replace("http://beta-eta.sigmaphidelta.org/mobile.html");
-        }
-    </script>
-    <!-- Media Queries to properly resize the slideshow and the slideshow styling -->
-    <style>
-        @media all and (max-width:2000px) {
-            #ssCont{
-                width: 200%;
-                height: 398px;
-                left: -70%;
+    <!-- Load in the javascript file -->
+    <script language="javascript" type="text/javascript" src="js/index.js"></script>
 
-            }
-
-        }
-        @media all and (max-width:1600px) {
-            /*body{
-                border: 1px solid green;
-            }*/
-            #ssCont{
-                width: 248%;
-                height: 298px;
-                left: -99.5%;
-            }
-        }
-        @media all and (max-width:900px) {
-            /*body{
-                border: 1px solid red;
-            }*/
-        }
-        #ssCont{
-            text-align: left;
-            margin: 100px auto 50px;
-            -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            -moz-box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-        }
-        .scalingFontSize{
-            font-size: 1vw;
-        }
-        /* Slideshow */
-        .slideshow {
-            margin:-2px;
-            padding: 0;
-            position: relative;
-            width: 13.25%;
-            height: 100.5%;
-        }
-        .slideshow > div.imgCont {
-            position: absolute;
-            top: 0;
-            left: 100%;
-            right: 0;
-            bottom: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
-        .imgCont {
-            height: 100.5%; width: 100%;
-        }
-        .imgCont img{
-            height: 100%; width: 100%;
-        }
-        #slideshow3 div.imgCont img{
-            height: 112.5%; width: 112%;
-            bottom: 6.25%; position: relative;
-        }
-        #slideshow4{
-            left: 1.60%;
-        }
-        .blackOverlay{
-            position: absolute;
-            height: 100%;
-            width:100%;
-            background-color: #464646;
-            opacity: 0.75;
-            z-index: 10;
-            top: 0;
-            left: 100%;
-        }
-        #slideshowBorder{
-            position: absolute;
-            height: 111%;
-            width: 14.55%;
-            border: 10px solid #363636;
-            z-index: 10;
-            left: 52.75%;
-            bottom: -7.5%;
-            -webkit-box-shadow: 0 0 15px 0 rgba(38,38,38,1);
-            -moz-box-shadow: 0 0 15px 0 rgba(38,38,38,1);
-            box-shadow: 0 0 15px 0 rgba(38,38,38,1);
-        }
-    </style>
+    <!-- Load in the CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body id="pageone" class="posRel width100 height100 overflowXHidden marg0 pad0 backColBackGround">

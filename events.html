@@ -12,10 +12,10 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     <!-- Load in the javascript file -->
-    <script language="javascript" type="text/javascript" src="js/index.js"></script>
+    <script language="javascript" type="text/javascript" src="js/main.js"></script>
 
     <!-- Load in the CSS file -->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -32,73 +32,12 @@
     <!-- Masonry -->
     <script src="js/masonry.pkgd.min.js"></script>
 
-    <!-- Masonry -->
-    <script>
-        $(window).on('load', function(){
-            $('#grid').masonry({
-                columnWidth: 1,
-                itemSelector: '.grid-item'
-            });
-        });
-    </script>
+    <!-- Load in the javascript file -->
+    <script language="javascript" type="text/javascript" src="js/events.js"></script>
 
-    <!-- Events Page Specific Styling -->
-    <style>
-        .event {
-            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
+    <!-- Load in the CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/events.css">
 
-        .event::after {
-            content: "";
-            border-radius: 5px;
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .event:hover {
-            -webkit-transform: scale(1.25, 1.25);
-            transform: scale(1.25, 1.25);
-            z-index: 10;
-        }
-
-        .event:hover::after {
-            opacity: 1;
-        }
-    </style>
-
-    <!-- Script to load in all grid-items -->
-    <script>
-        $(document).ready(function(){
-            var eventList = [
-                "spring2016/rushflier.jpg",
-                "fall2015/clothingdrive.jpg",
-                "fall2015/sexharassment.jpg",
-                "fall2015/bubbletea.jpg",
-                "fall2015/resumereview.jpg"
-            ];
-
-            for(var i = 0; i < eventList.length; i++){
-                var gridItemString = '<div class="grid-item event shadow"><a href="images/fliers/';
-                gridItemString += eventList[i];
-                gridItemString += '"><img class="small" src="images/fliers/';
-                gridItemString += eventList[i];
-                gridItemString += '"width="100%"></a><img class="enlarge" src="images/fliers/';
-                gridItemString += eventList[i];
-                gridItemString += '" width="200%">';
-
-                $('#grid').append($(gridItemString));
-            }
-        });
-    </script>
 </head>
 
 <body class="posRel width100 height100 overflowXHidden backColBackGround marg0 pad0">
@@ -106,7 +45,7 @@
 <div id="header"></div>
 
 <!-- Content -->
-<div id="grid" class="posRel roboto height100 fontSize20" style="min-width: 900px; margin: 30px auto 25px auto; min-height: 700px;max-width: 70%;"></div>
+<div id="grid" class="posRel roboto height100 fontSize20" style="min-width: 900px; margin: 30px auto 75px auto; min-height: 700px;max-width: 70%;"></div>
 
 <!-- Footer -->
 <div id="footer" class="posAbs"></div>
