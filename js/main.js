@@ -3,6 +3,10 @@
  */
 
 
+if (screen.width <= 899) {
+    $('#footer').css('position', 'fixed')
+}
+
 $(document).ready(function(){
 
     $('#header').load("header.html");

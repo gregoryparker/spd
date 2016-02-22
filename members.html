@@ -140,11 +140,22 @@
 
             if (rowData[9] != 'FALSE'){
                 if(rowData[10] == 'TRUE'){
-                    var divPicture = $(
-                            '<div class="pad0"> ' +
-                            '<div class="overflowHidden" style="max-height: 350px;"><img src="' + rowData[9] +  '" width="100%" /></div>' +
-                            '</div>');
-                    tr.append(divPicture);
+                    if(rowData[11] == 'TRUE'){
+                        var divPicture = $(
+                                '<div class="pad0"> ' +
+                                '<div class="overflowHidden" style="max-height: 350px;"><img style="position: relative; bottom: 50px;" src="' + rowData[9] +  '" width="100%" /></div>' +
+                                '</div>');
+                        tr.append(divPicture);
+                    }
+
+                    else{
+                        var divPicture = $(
+                                '<div class="pad0"> ' +
+                                '<div class="overflowHidden" style="max-height: 350px;"><img src="' + rowData[9] +  '" width="100%" /></div>' +
+                                '</div>');
+                        tr.append(divPicture);
+                    }
+
                 }else{
                     var divPicture = $(
                             '<div class="pad0"> ' +
