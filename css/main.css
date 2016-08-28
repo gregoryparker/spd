@@ -56,6 +56,9 @@
 .vertAlignMid       {  vertical-align: middle;                      }
 .vertAlignTop       {  vertical-align: top;                         }
 .vertAlignBot       {  vertical-align: bottom;                      }
+.vertCenterLeft      {  display: flex; align-items:center;           }
+.vertCenterMiddle      {  display: flex; align-items:center;  justify-content:center;         }
+.vertCenterRight      {  display: flex; align-items:center; justify-content:flex-end;          }
 
 /* Simple Borders : Mainly used for debugging */
 .bordRed            {  border: 1px solid red;                       }

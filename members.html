@@ -172,7 +172,7 @@
                             '<div id="class" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize18 selCat" style="line-height: 37px; margin: 3px auto;">&' + rowData[2] + ';</div>' + '<div class="classCat inlineBlock" style="padding-left: 10px;">' + rowData[2] + '</div></div></div>' +
                             '<div id="major" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize13 selCat" style="line-height: 37px; margin: 3px auto;">' + rowData[1] + '</div>' + '<div class="majorCat inlineBlock" style="padding-left: 10px;">' + getMajorLong(rowData[1]) + '</div></div></div>' +
                             '<div id="membership" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;">' + rowData[5] + '</div>' + '<div class="memberCat inlineBlock selCat" style="padding-left: 10px;">' + rowData[7] + '</div></div></div>' +
-                            '<div id="hometown" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;"><div class="flaticon-house34 posRel" style="right: 13px;"></div></div>' + '<div class="inlineBlock posRel" style="padding-left: 10px;bottom: 3px;">' + rowData[3] + '</div></div></div>' +
+                            '<div id="hometown" class="categ centerVert"><div><div class="cmCont colWhite boldText inlineBlock centerText fontSize10" style="line-height: 37px; margin: 3px auto;"><div class="flaticon-house34 posRel" style="right: 13px;"></div></div>' + '<div class="inlineBlock posRel" style="white-space: pre-wrap;padding-left: 10px;bottom: 3px;">' + rowData[3] + '</div></div></div>' +
                         '</div>' +
                     '</div>');
             tr.append(divContent);
@@ -194,6 +194,9 @@
             else if (major=='CSE' || major=='CS')       {  return 'Computer Science';                                           }
             else if (major=='ISE' || major=='IS')       {  return 'Information Systems';                                        }
             else if (major=='MEC' || major=='ME')       {  return 'Mechanical Engineering';                                     }
+            else if (major=='HAN')                      {  return 'Health Science';                                             }
+            else if (major=='BUS')                      {  return 'Business Management';                                        }
+            else if (major=='PSY')                      {  return 'Psychology';                                                 }
             else if (major=='AMS' )                     {  return '<div class="fontSize14">Applied Math and Statistics</div>';  }
             else if (major=='ES' )                      {  return 'Environmental Science';                                      }
             else if (major=='TSM' )                     {  return '<div class="fontSize14">Technical Systems Mgmt.</div>';      }
@@ -285,6 +288,7 @@
                 else if (classCat == 'Iota')        {  return 8;    }
                 else if (classCat == 'Kappa')       {  return 9;    }
                 else if (classCat == 'Lambda')      {  return 10;   }
+                // Repeat these lines to add more classes
             }
 
             var $grid = $('#data').isotope({

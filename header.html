@@ -43,27 +43,31 @@
         var file = window.location.href.substring(srt, end);
         //alert(file);
 
-        if (file == "org/index" || file == "index" || file == "org/mobile" || file == "mobile"){
+        if (file == "org/index" || file == "index" || file == "org/mobile" || file == "mobile" || file == "beta-eta.sigmaphidelta.org" || file == "http://localhost:63342/sigmaphidelta/"){
             $('#nvb-index').addClass('selnavbaritem');
         }
-        if (file == "org/about" || file == "about"){
+        else if (file == "org/about" || file == "about"){
             $('#nvb-about').addClass('selnavbaritem');
         }
-        if (file == "org/rush" || file == "rush"){
+        else if (file == "org/rush" || file == "rush"){
             $('#nvb-rush').addClass('selnavbaritem');
         }
-        if (file == "org/events" || file == "events"){
+        else if (file == "org/events" || file == "events"){
             $('#nvb-events').addClass('selnavbaritem');
         }
-        if (file == "org/members" || file == "members"){
+        else if (file == "org/members" || file == "members"){
             $('#nvb-members').addClass('selnavbaritem');
         }
-        if (file == "org/alumni" || file == "alumni"){
+        else if (file == "org/alumni" || file == "alumni"){
             $('#nvb-alumni').addClass('selnavbaritem');
         }
-        if (file == "org/contact" || file == "contact"){
+        else if (file == "org/contact" || file == "contact"){
             $('#nvb-contact').addClass('selnavbaritem');
         }
+        else{
+            $('#nvb-index').addClass('selnavbaritem');
+        }
+
         $(".navbaritem").mouseenter(function() {
 
             if (!($(this).hasClass("selnavbaritem"))){
